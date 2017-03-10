@@ -15,6 +15,9 @@
 		17F4E5FC1E7200FD0085960F /* rankedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E5FB1E7200FD0085960F /* rankedTests.swift */; };
 		17F4E6071E7200FD0085960F /* rankedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E6061E7200FD0085960F /* rankedUITests.swift */; };
 		17F4E61E1E72153B0085960F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17F4E61D1E72153B0085960F /* GoogleService-Info.plist */; };
+		17F4E6201E7225C50085960F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E61F1E7225C50085960F /* MapViewController.swift */; };
+		17F4E6211E7225C50085960F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E61F1E7225C50085960F /* MapViewController.swift */; };
+		17F4E6221E7225C50085960F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E61F1E7225C50085960F /* MapViewController.swift */; };
 		C3C591D94BA97296075CD32F /* Pods_rankedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B092BE80D010BB217558290 /* Pods_rankedTests.framework */; };
 		D1BC140F66C6226CBB60414D /* Pods_rankedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E922B6AB52C06CFF7B67DDB /* Pods_rankedUITests.framework */; };
 		E192021628AF98541CB4257F /* Pods_ranked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF81D44AC2B85AC4DF30804 /* Pods_ranked.framework */; };
@@ -52,6 +55,7 @@
 		17F4E6061E7200FD0085960F /* rankedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rankedUITests.swift; sourceTree = "<group>"; };
 		17F4E6081E7200FD0085960F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17F4E61D1E72153B0085960F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		17F4E61F1E7225C50085960F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2ADF4CF07C48ADBF197D2133 /* Pods-rankedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rankedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rankedUITests/Pods-rankedUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4746C45FC198C94FFE4396A5 /* Pods-rankedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rankedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rankedUITests/Pods-rankedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4AA2546E3F008BDACDE80E3E /* Pods-ranked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ranked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ranked/Pods-ranked.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				17F4E5ED1E7200FD0085960F /* Assets.xcassets */,
 				17F4E5EF1E7200FD0085960F /* LaunchScreen.storyboard */,
 				17F4E5F21E7200FD0085960F /* Info.plist */,
+				17F4E61F1E7225C50085960F /* MapViewController.swift */,
 			);
 			path = ranked;
 			sourceTree = "<group>";
@@ -459,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17F4E5E91E7200FD0085960F /* ViewController.swift in Sources */,
+				17F4E6201E7225C50085960F /* MapViewController.swift in Sources */,
 				17F4E5E71E7200FD0085960F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17F4E5FC1E7200FD0085960F /* rankedTests.swift in Sources */,
+				17F4E6211E7225C50085960F /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17F4E6071E7200FD0085960F /* rankedUITests.swift in Sources */,
+				17F4E6221E7225C50085960F /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
