@@ -102,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="-3036" y="464"/>
         </scene>
-        <!--Map View Controller-->
+        <!--MAP-->
         <scene sceneID="FNC-0v-10k">
             <objects>
                 <viewController id="IjN-CX-R0s" customClass="MapViewController" customModule="ranked" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,7 +126,7 @@
                             <constraint firstItem="OqE-hV-9PZ" firstAttribute="height" secondItem="f1Z-HT-GeK" secondAttribute="height" id="l49-89-oFx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wq4-Jw-hfG"/>
+                    <navigationItem key="navigationItem" title="MAP" id="wq4-Jw-hfG"/>
                     <connections>
                         <outlet property="Map" destination="OqE-hV-9PZ" id="iIN-2j-GZv"/>
                     </connections>
