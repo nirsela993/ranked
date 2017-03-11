@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="-850" y="873"/>
         </scene>
-        <!--Categories View Controller-->
+        <!--Categories-->
         <scene sceneID="J1V-6n-S58">
             <objects>
                 <viewController id="4YP-Gc-vmO" customClass="CategoriesViewController" customModule="ranked" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rue-Rm-t0G">
                                 <rect key="frame" x="25" y="134" width="325" height="429"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vAO-TZ-dqR">
                                     <size key="itemSize" width="114" height="114"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -97,6 +97,7 @@
                                         <connections>
                                             <outlet property="cellImage" destination="yWk-pP-mC8" id="w2g-vE-OPc"/>
                                             <outlet property="cellLable" destination="TWy-77-Lkb" id="P1m-jQ-EtX"/>
+                                            <segue destination="zbP-dV-0nn" kind="show" identifier="categoryPageSelection" id="PJF-2F-uK7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -105,30 +106,53 @@
                                     <outlet property="delegate" destination="4YP-Gc-vmO" id="VlY-m0-e6T"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Categories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPw-Cx-AIm">
-                                <rect key="frame" x="127" y="64" width="120" height="47"/>
-                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="gXk-Dt-pli" firstAttribute="top" secondItem="rue-Rm-t0G" secondAttribute="bottom" constant="20" id="3VY-rA-SV8"/>
                             <constraint firstItem="gXk-Dt-pli" firstAttribute="top" secondItem="rue-Rm-t0G" secondAttribute="bottom" id="Jfl-Ox-yte"/>
-                            <constraint firstItem="tPw-Cx-AIm" firstAttribute="leading" secondItem="RZa-FN-FU8" secondAttribute="leadingMargin" id="K5j-PK-gsu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rue-Rm-t0G" secondAttribute="trailing" id="LBP-Es-4TJ"/>
                             <constraint firstItem="rue-Rm-t0G" firstAttribute="leading" secondItem="RZa-FN-FU8" secondAttribute="leadingMargin" id="SoU-KA-Xwv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tPw-Cx-AIm" secondAttribute="trailing" id="eul-MW-1O0"/>
+                            <constraint firstItem="rue-Rm-t0G" firstAttribute="leading" secondItem="RZa-FN-FU8" secondAttribute="leadingMargin" id="WEA-zL-p6z"/>
+                            <constraint firstItem="rue-Rm-t0G" firstAttribute="top" secondItem="78N-V3-ZqG" secondAttribute="bottom" constant="20" id="ZWV-1v-OKh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rue-Rm-t0G" secondAttribute="trailing" id="hhj-HU-IMX"/>
-                            <constraint firstItem="rue-Rm-t0G" firstAttribute="top" secondItem="tPw-Cx-AIm" secondAttribute="bottom" constant="20" id="tdr-Va-hJ7"/>
-                            <constraint firstItem="tPw-Cx-AIm" firstAttribute="top" secondItem="78N-V3-ZqG" secondAttribute="bottom" id="zdc-JW-yke"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3kM-GP-syG"/>
+                    <navigationItem key="navigationItem" title="Categories" id="3kM-GP-syG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9C-Ui-orU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106.40000000000001" y="871.21439280359823"/>
+        </scene>
+        <!--Category View-->
+        <scene sceneID="1Ur-7Y-PNN">
+            <objects>
+                <viewController title="Category View" id="zbP-dV-0nn" customClass="categoryView" customModule="ranked" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wmc-Ez-SE3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ojz-M7-KPX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qCz-xO-EvQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htW-pT-BHv">
+                                <rect key="frame" x="73" y="189" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="categoryNameLabel" destination="htW-pT-BHv" id="xoe-LM-bZ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guu-Jl-xYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597.60000000000002" y="872.11394302848578"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="DM3-Ny-IjD">
