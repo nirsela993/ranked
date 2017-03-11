@@ -16,15 +16,12 @@ class CategoriesViewController: UIViewController,UICollectionViewDataSource,UICo
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(self.categorieNames.count)
-        print(self.categorieNames.count)
-        print(self.categorieNames.count)
         return self.categorieNames.count
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("creatingCell")
+        
         let cell : CategoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCategory", for: indexPath) as! CategoryCell
 
         cell.cellLable.text = self.categorieNames[indexPath.row]
