@@ -10,8 +10,8 @@ import UIKit
 
 class CategoriesViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
-    var categorieNames: [String] = ["Funny","Food","Cute","WTF"]
-    var categoryImages: [String] = ["Funny.png","Funny.png","Funny.png","Funny.png"]
+    var categorieNames: [String] = ["Funny","Food","Cute","WTF","Funny","Food","Cute","WTF"]
+    var categoryImages: [String] = ["Funny.png","food.png","cute.png","wtf.png","Funny.png","food.png","cute.png","wtf.png"]
     
     
     

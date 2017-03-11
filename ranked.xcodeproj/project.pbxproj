@@ -19,6 +19,9 @@
 		17F4E6211E7225C50085960F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E61F1E7225C50085960F /* MapViewController.swift */; };
 		17F4E6221E7225C50085960F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E61F1E7225C50085960F /* MapViewController.swift */; };
 		17F7A9671E73FAFF00ECBBF0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F7A9661E73FAFF00ECBBF0 /* CoreLocation.framework */; };
+		590AC8351E746B0D008EDBBC /* cute.png in Resources */ = {isa = PBXBuildFile; fileRef = 590AC8341E746B0D008EDBBC /* cute.png */; };
+		590AC8371E7474B6008EDBBC /* wtf.png in Resources */ = {isa = PBXBuildFile; fileRef = 590AC8361E7474B6008EDBBC /* wtf.png */; };
+		590AC8391E74750E008EDBBC /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = 590AC8381E74750E008EDBBC /* food.png */; };
 		5937F6381E7432E800A4989C /* Funny.png in Resources */ = {isa = PBXBuildFile; fileRef = 5937F6371E7432E800A4989C /* Funny.png */; };
 		596492EC1E742F6F00403E04 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596492EB1E742F6F00403E04 /* CategoriesViewController.swift */; };
 		59AFE0841E73F5B5001D51F7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 59AFE0831E73F5B5001D51F7 /* .gitignore */; };
@@ -65,6 +68,9 @@
 		2ADF4CF07C48ADBF197D2133 /* Pods-rankedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rankedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rankedUITests/Pods-rankedUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4746C45FC198C94FFE4396A5 /* Pods-rankedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rankedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rankedUITests/Pods-rankedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4AA2546E3F008BDACDE80E3E /* Pods-ranked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ranked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ranked/Pods-ranked.debug.xcconfig"; sourceTree = "<group>"; };
+		590AC8341E746B0D008EDBBC /* cute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cute.png; sourceTree = "<group>"; };
+		590AC8361E7474B6008EDBBC /* wtf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wtf.png; sourceTree = "<group>"; };
+		590AC8381E74750E008EDBBC /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
 		5937F6371E7432E800A4989C /* Funny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Funny.png; sourceTree = "<group>"; };
 		596492EB1E742F6F00403E04 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesViewController.swift; path = CategoriesPage/CategoriesViewController.swift; sourceTree = "<group>"; };
 		59AFE0831E73F5B5001D51F7 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -186,6 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				5937F6371E7432E800A4989C /* Funny.png */,
+				590AC8341E746B0D008EDBBC /* cute.png */,
+				590AC8381E74750E008EDBBC /* food.png */,
+				590AC8361E7474B6008EDBBC /* wtf.png */,
 				596492EB1E742F6F00403E04 /* CategoriesViewController.swift */,
 				59D024061E7427E200CB04B3 /* CategoryCell.swift */,
 			);
@@ -324,8 +333,11 @@
 				59AFE0841E73F5B5001D51F7 /* .gitignore in Resources */,
 				5937F6381E7432E800A4989C /* Funny.png in Resources */,
 				17F4E5F11E7200FD0085960F /* LaunchScreen.storyboard in Resources */,
+				590AC8351E746B0D008EDBBC /* cute.png in Resources */,
 				17F4E5EE1E7200FD0085960F /* Assets.xcassets in Resources */,
 				17F4E61E1E72153B0085960F /* GoogleService-Info.plist in Resources */,
+				590AC8371E7474B6008EDBBC /* wtf.png in Resources */,
+				590AC8391E74750E008EDBBC /* food.png in Resources */,
 				17F4E5EC1E7200FD0085960F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
