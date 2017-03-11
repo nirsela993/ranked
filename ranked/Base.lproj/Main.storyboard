@@ -29,12 +29,12 @@
             </objects>
             <point key="canvasLocation" x="-1649" y="886"/>
         </scene>
-        <!--Item-->
+        <!--Archive-->
         <scene sceneID="ZH6-6Q-doH">
             <objects>
                 <navigationController id="8Ap-T1-xq9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="archive" selectedImage="archive" id="LYZ-Ay-9oW"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A68-5o-T8r">
+                    <tabBarItem key="tabBarItem" title="Archive" image="archive" selectedImage="archive" id="LYZ-Ay-9oW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A68-5o-T8r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -85,12 +85,12 @@
             </objects>
             <point key="canvasLocation" x="-849" y="96"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="IVk-vR-wec">
             <objects>
                 <navigationController id="oZB-Vq-61d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="map" selectedImage="map" id="Qk4-Eu-Kar"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jcQ-Zm-QSt">
+                    <tabBarItem key="tabBarItem" title="Map" image="map" selectedImage="map" id="Qk4-Eu-Kar"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jcQ-Zm-QSt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -135,12 +135,12 @@
             </objects>
             <point key="canvasLocation" x="-3015.1999999999998" y="1178.8605697151424"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="DSt-wG-Y50">
             <objects>
                 <navigationController id="tWi-Ae-abL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="home" selectedImage="home" id="XL6-8J-cEi"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xp7-G6-nLT">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home" id="XL6-8J-cEi"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xp7-G6-nLT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -152,12 +152,12 @@
             </objects>
             <point key="canvasLocation" x="-2330" y="886"/>
         </scene>
-        <!--Item-->
+        <!--Vote-->
         <scene sceneID="ATi-FV-DFK">
             <objects>
                 <navigationController id="pro-BG-Nit" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="vote" selectedImage="vote" id="5hu-y6-BDV"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2st-iJ-XJr">
+                    <tabBarItem key="tabBarItem" title="Vote" image="vote" selectedImage="vote" id="5hu-y6-BDV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2st-iJ-XJr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -214,7 +214,7 @@
             <objects>
                 <navigationController id="j74-TJ-a3k" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="igg-4r-Mny"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="y1V-6c-9tI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y1V-6c-9tI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -251,7 +251,7 @@
             <objects>
                 <navigationController id="ev9-k6-B8E" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="C2R-iU-GdR"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5rj-GA-Uxg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5rj-GA-Uxg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
