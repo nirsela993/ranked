@@ -35,7 +35,7 @@
             <objects>
                 <navigationController title="Categories" id="8Ap-T1-xq9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Archive" image="archive" selectedImage="archive" id="LYZ-Ay-9oW"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A68-5o-T8r">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="A68-5o-T8r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

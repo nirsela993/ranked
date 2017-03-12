@@ -17,6 +17,7 @@ class categoryView: UIViewController {
         super.viewDidLoad()
         if (self.categoryName != nil){
             categoryNameLabel.text = self.categoryName
+            self.navigationItem.title = self.categoryName
         }
 
         // Do any additional setup after loading the view.
