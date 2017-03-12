@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Home-->
         <scene sceneID="W6g-UN-W3H">
             <objects>
                 <viewController id="haf-bw-GjC" sceneMemberID="viewController">
@@ -24,7 +24,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="hj3-Pi-QOC"/>
-                    <navigationItem key="navigationItem" id="qPI-oy-Aun"/>
+                    <navigationItem key="navigationItem" title="Home" id="qPI-oy-Aun"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ri-Z9-B82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,7 +35,7 @@
             <objects>
                 <navigationController title="Categories" id="8Ap-T1-xq9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Archive" image="archive" selectedImage="archive" id="LYZ-Ay-9oW"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="A68-5o-T8r">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="A68-5o-T8r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -154,7 +154,7 @@
             </objects>
             <point key="canvasLocation" x="597.60000000000002" y="872.11394302848578"/>
         </scene>
-        <!--Item 1-->
+        <!--Vote-->
         <scene sceneID="DM3-Ny-IjD">
             <objects>
                 <viewController id="nWB-Zy-wtL" sceneMemberID="viewController">
@@ -168,7 +168,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Tgr-r8-Wl9"/>
-                    <navigationItem key="navigationItem" id="Awk-CI-6AR"/>
+                    <navigationItem key="navigationItem" title="Vote" id="Awk-CI-6AR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjA-WQ-qjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
