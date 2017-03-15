@@ -26,6 +26,7 @@
 		590AC8371E7474B6008EDBBC /* wtf.png in Resources */ = {isa = PBXBuildFile; fileRef = 590AC8361E7474B6008EDBBC /* wtf.png */; };
 		590AC8391E74750E008EDBBC /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = 590AC8381E74750E008EDBBC /* food.png */; };
 		590AC83B1E748336008EDBBC /* categoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590AC83A1E748336008EDBBC /* categoryView.swift */; };
+		590AC8411E79496D008EDBBC /* postListVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590AC8401E79496D008EDBBC /* postListVIewController.swift */; };
 		5937F6381E7432E800A4989C /* Funny.png in Resources */ = {isa = PBXBuildFile; fileRef = 5937F6371E7432E800A4989C /* Funny.png */; };
 		596492EC1E742F6F00403E04 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596492EB1E742F6F00403E04 /* CategoriesViewController.swift */; };
 		59AFE0841E73F5B5001D51F7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 59AFE0831E73F5B5001D51F7 /* .gitignore */; };
@@ -77,6 +78,7 @@
 		590AC8361E7474B6008EDBBC /* wtf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wtf.png; sourceTree = "<group>"; };
 		590AC8381E74750E008EDBBC /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
 		590AC83A1E748336008EDBBC /* categoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = categoryView.swift; path = CategoriesPage/categoryView.swift; sourceTree = "<group>"; };
+		590AC8401E79496D008EDBBC /* postListVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = postListVIewController.swift; path = postListView/postListVIewController.swift; sourceTree = "<group>"; };
 		5937F6371E7432E800A4989C /* Funny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Funny.png; sourceTree = "<group>"; };
 		596492EB1E742F6F00403E04 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesViewController.swift; path = CategoriesPage/CategoriesViewController.swift; sourceTree = "<group>"; };
 		59AFE0831E73F5B5001D51F7 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		17F4E5E51E7200FD0085960F /* ranked */ = {
 			isa = PBXGroup;
 			children = (
+				590AC83F1E794947008EDBBC /* postListView */,
 				596492ED1E7431BE00403E04 /* CategoryPage */,
 				17F4E61D1E72153B0085960F /* GoogleService-Info.plist */,
 				17F4E6181E720BC70085960F /* models */,
@@ -194,6 +197,14 @@
 			children = (
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		590AC83F1E794947008EDBBC /* postListView */ = {
+			isa = PBXGroup;
+			children = (
+				590AC8401E79496D008EDBBC /* postListVIewController.swift */,
+			);
+			name = postListView;
 			sourceTree = "<group>";
 		};
 		596492ED1E7431BE00403E04 /* CategoryPage */ = {
@@ -509,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				590AC8411E79496D008EDBBC /* postListVIewController.swift in Sources */,
 				590AC83B1E748336008EDBBC /* categoryView.swift in Sources */,
 				17F4E5E91E7200FD0085960F /* ViewController.swift in Sources */,
 				17F4E6201E7225C50085960F /* MapViewController.swift in Sources */,

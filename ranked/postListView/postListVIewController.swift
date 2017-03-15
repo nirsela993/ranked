@@ -1,25 +1,17 @@
 //
-//  categoryView.swift
+//  postListVIewController.swift
 //  ranked
 //
-//  Created by macDevMachinVB on 11/03/2017.
+//  Created by macDevMachinVB on 15/03/2017.
 //  Copyright © 2017 Nir Sela. All rights reserved.
 //
 
 import UIKit
 
-class categoryView: UIViewController {
+class postListVIewController: UIViewController {
 
-    @IBOutlet var navigationTitle: UINavigationItem!
-    var categoryName:String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (self.categoryName != nil){
-
-//            self.navigationItem.title = self.categoryName
-            self.navigationTitle.title = self.categoryName
-        }
 
         // Do any additional setup after loading the view.
     }
@@ -29,7 +21,6 @@ class categoryView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-  
+ 
 
 }
