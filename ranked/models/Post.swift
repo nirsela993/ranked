@@ -12,9 +12,10 @@ import FirebaseDatabase
 
 class Post {
     var id:String
-    var nickname:String
+    var authorNickname:String
     var picture:String
     var title:String
+    var category:String
     var uploadDate:Date
     var likes:NSNumber
     var dislikes:NSNumber
@@ -22,9 +23,9 @@ class Post {
     var longtibute:NSNumber
     var timestamp:NSNumber
     
-    init(id:String, nickname:String, picture:String, title:String, uploadDate:Date, likes:NSNumber,dislikes:NSNumber, latitube:NSNumber, longtibute:NSNumber, timestamp:NSNumber) {
+    init(id:String,category:String, authorNickname:String, picture:String, title:String, uploadDate:Date, likes:NSNumber,dislikes:NSNumber, latitube:NSNumber, longtibute:NSNumber, timestamp:NSNumber) {
         self.id=id
-        self.nickname=nickname
+        self.authorNickname=authorNickname
         self.picture=picture
         self.title=title
         self.uploadDate=uploadDate
@@ -33,12 +34,13 @@ class Post {
         self.latitube=latitube
         self.longtibute=longtibute
         self.timestamp=timestamp
+        self.category=category
     }
     
     func toFirebase() -> Dictionary<String,Any> {
         var json = Dictionary<String,Any>()
         json["id"] = id
-        json["nickname"] = nickname
+        json["authorNickname"] = authorNickname
         json["picture"] = picture
         json["title"] = title
         json["uploadDate"] = uploadDate
