@@ -22,6 +22,7 @@ class Post {
     var latitube:NSNumber
     var longtibute:NSNumber
     var timestamp:NSNumber
+//    var comments:[Comment]
     
     init(id:String,category:String, authorNickname:String, picture:String, title:String, uploadDate:Date, likes:NSNumber,dislikes:NSNumber, latitube:NSNumber, longtibute:NSNumber, timestamp:NSNumber) {
         self.id=id

@@ -119,10 +119,11 @@
         <scene sceneID="ZH6-6Q-doH">
             <objects>
                 <navigationController title="Categories" id="8Ap-T1-xq9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Archive" image="archive" selectedImage="archive" id="LYZ-Ay-9oW"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="A68-5o-T8r">
+                    <tabBarItem key="tabBarItem" title="Categories" image="archive" selectedImage="archive" id="LYZ-Ay-9oW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="A68-5o-T8r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="4YP-Gc-vmO" kind="relationship" relationship="rootViewController" id="opV-ud-yBM"/>
@@ -213,7 +214,7 @@
         <scene sceneID="1Ur-7Y-PNN">
             <objects>
                 <viewController title="Category View" id="zbP-dV-0nn" customClass="categoryView" customModule="ranked" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="409" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xbp-57-63a">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="409" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xbp-57-63a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -240,19 +241,24 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFD-4U-faf">
                                                     <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
-                                                    <state key="normal" title="Button"/>
+                                                    <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Comments"/>
+                                                    <connections>
+                                                        <segue destination="RM3-Uz-RPc" kind="show" id="oHL-Ow-Mfg"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocC-lj-blZ">
                                                     <rect key="frame" x="119.5" y="0.0" width="120" height="30"/>
                                                     <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" title="-"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzW-EZ-Mpf">
                                                     <rect key="frame" x="239.5" y="0.0" width="119.5" height="30"/>
                                                     <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" title="+"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -293,6 +299,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guu-Jl-xYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1626.4000000000001" y="1915.5922038980511"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3H1-5X-RBI">
+            <objects>
+                <viewController id="RM3-Uz-RPc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gsP-0S-L1G"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ure-Gf-2bm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zgL-sh-24n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.3242956561" green="1" blue="0.087715319159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DOw-mx-7jk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1036" y="1916"/>
         </scene>
         <!--Vote-->
         <scene sceneID="DM3-Ny-IjD">
@@ -369,9 +393,10 @@
             <objects>
                 <navigationController id="tWi-Ae-abL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home" id="XL6-8J-cEi"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="xp7-G6-nLT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="xp7-G6-nLT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="zbP-dV-0nn" kind="relationship" relationship="rootViewController" id="F9R-mv-b89"/>
@@ -426,6 +451,6 @@
         <image name="vote" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PJF-2F-uK7"/>
+        <segue reference="F9R-mv-b89"/>
     </inferredMetricsTieBreakers>
 </document>

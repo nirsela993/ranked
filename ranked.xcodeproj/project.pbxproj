@@ -40,6 +40,7 @@
 		59D024071E7427E200CB04B3 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D024061E7427E200CB04B3 /* CategoryCell.swift */; };
 		59DE6C321E79EB3600FE0FC7 /* postTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DE6C311E79EB3600FE0FC7 /* postTableViewCell.swift */; };
 		59DE6C3C1E7ADC1200FE0FC7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DE6C3B1E7ADC1200FE0FC7 /* Post.swift */; };
+		59DE6C3E1E7AFE3000FE0FC7 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DE6C3D1E7AFE3000FE0FC7 /* Comment.swift */; };
 		C3C591D94BA97296075CD32F /* Pods_rankedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B092BE80D010BB217558290 /* Pods_rankedTests.framework */; };
 		D1BC140F66C6226CBB60414D /* Pods_rankedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E922B6AB52C06CFF7B67DDB /* Pods_rankedUITests.framework */; };
 		E192021628AF98541CB4257F /* Pods_ranked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF81D44AC2B85AC4DF30804 /* Pods_ranked.framework */; };
@@ -97,6 +98,7 @@
 		59D024061E7427E200CB04B3 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryCell.swift; path = CategoriesPage/CategoryCell.swift; sourceTree = "<group>"; };
 		59DE6C311E79EB3600FE0FC7 /* postTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postTableViewCell.swift; sourceTree = "<group>"; };
 		59DE6C3B1E7ADC1200FE0FC7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = models/Post.swift; sourceTree = "<group>"; };
+		59DE6C3D1E7AFE3000FE0FC7 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		7CF81D44AC2B85AC4DF30804 /* Pods_ranked.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ranked.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B092BE80D010BB217558290 /* Pods_rankedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E922B6AB52C06CFF7B67DDB /* Pods_rankedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +215,7 @@
 			children = (
 				17665D7A1E7987A600D0DB48 /* PostModelFirebase.swift */,
 				17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */,
+				59DE6C3D1E7AFE3000FE0FC7 /* Comment.swift */,
 				59DE6C3B1E7ADC1200FE0FC7 /* Post.swift */,
 			);
 			name = models;
@@ -548,6 +551,7 @@
 				17F4E5E91E7200FD0085960F /* ViewController.swift in Sources */,
 				17F4E6201E7225C50085960F /* MapViewController.swift in Sources */,
 				17665D7B1E7987A600D0DB48 /* PostModelFirebase.swift in Sources */,
+				59DE6C3E1E7AFE3000FE0FC7 /* Comment.swift in Sources */,
 				17F4E5E71E7200FD0085960F /* AppDelegate.swift in Sources */,
 				59D024071E7427E200CB04B3 /* CategoryCell.swift in Sources */,
 				596492EC1E742F6F00403E04 /* CategoriesViewController.swift in Sources */,
