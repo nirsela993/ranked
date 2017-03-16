@@ -45,7 +45,7 @@ class Post {
         json["dislikes"] = dislikes
         json["latitube"] = dislikes
         json["longtibute"] = dislikes
-        json["timestamp"] = FIRServerValue.timestamp()
+//        json["timestamp"] = FIRServerValue.timestamp()
         return json
     }
     

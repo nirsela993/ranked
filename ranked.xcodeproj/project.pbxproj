@@ -39,7 +39,10 @@
 		5937F6381E7432E800A4989C /* Funny.png in Resources */ = {isa = PBXBuildFile; fileRef = 5937F6371E7432E800A4989C /* Funny.png */; };
 		596492EC1E742F6F00403E04 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596492EB1E742F6F00403E04 /* CategoriesViewController.swift */; };
 		59AFE0841E73F5B5001D51F7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 59AFE0831E73F5B5001D51F7 /* .gitignore */; };
+		59CD57BA1E79DBDC00E12AB5 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CD57B91E79DBDC00E12AB5 /* GoogleToolboxForMac.framework */; };
 		59D024071E7427E200CB04B3 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D024061E7427E200CB04B3 /* CategoryCell.swift */; };
+		59DE6C301E79E5A300FE0FC7 /* postTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DE6C2F1E79E5A300FE0FC7 /* postTableViewController.swift */; };
+		59DE6C321E79EB3600FE0FC7 /* postTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DE6C311E79EB3600FE0FC7 /* postTableViewCell.swift */; };
 		C3C591D94BA97296075CD32F /* Pods_rankedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B092BE80D010BB217558290 /* Pods_rankedTests.framework */; };
 		D1BC140F66C6226CBB60414D /* Pods_rankedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E922B6AB52C06CFF7B67DDB /* Pods_rankedUITests.framework */; };
 		E192021628AF98541CB4257F /* Pods_ranked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF81D44AC2B85AC4DF30804 /* Pods_ranked.framework */; };
@@ -94,7 +97,10 @@
 		5937F6371E7432E800A4989C /* Funny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Funny.png; sourceTree = "<group>"; };
 		596492EB1E742F6F00403E04 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesViewController.swift; path = CategoriesPage/CategoriesViewController.swift; sourceTree = "<group>"; };
 		59AFE0831E73F5B5001D51F7 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		59CD57B91E79DBDC00E12AB5 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "../../Library/Developer/Xcode/DerivedData/ranked-bvxfbljpttmfyffbfxshuvusknjv/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
 		59D024061E7427E200CB04B3 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryCell.swift; path = CategoriesPage/CategoryCell.swift; sourceTree = "<group>"; };
+		59DE6C2F1E79E5A300FE0FC7 /* postTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = postTableViewController.swift; path = postListView/postTableViewController.swift; sourceTree = "<group>"; };
+		59DE6C311E79EB3600FE0FC7 /* postTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postTableViewCell.swift; sourceTree = "<group>"; };
 		7CF81D44AC2B85AC4DF30804 /* Pods_ranked.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ranked.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B092BE80D010BB217558290 /* Pods_rankedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E922B6AB52C06CFF7B67DDB /* Pods_rankedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59CD57BA1E79DBDC00E12AB5 /* GoogleToolboxForMac.framework in Frameworks */,
 				17F7A9671E73FAFF00ECBBF0 /* CoreLocation.framework in Frameworks */,
 				E192021628AF98541CB4257F /* Pods_ranked.framework in Frameworks */,
 			);
@@ -135,6 +142,7 @@
 		02B6FA1CB0F89F3D9A38F7A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59CD57B91E79DBDC00E12AB5 /* GoogleToolboxForMac.framework */,
 				17F7A9661E73FAFF00ECBBF0 /* CoreLocation.framework */,
 				7CF81D44AC2B85AC4DF30804 /* Pods_ranked.framework */,
 				8B092BE80D010BB217558290 /* Pods_rankedTests.framework */,
@@ -218,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				590AC8401E79496D008EDBBC /* postListVIewController.swift */,
+				59DE6C2F1E79E5A300FE0FC7 /* postTableViewController.swift */,
+				59DE6C311E79EB3600FE0FC7 /* postTableViewCell.swift */,
 			);
 			name = postListView;
 			sourceTree = "<group>";
@@ -536,6 +546,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				17665D831E79A13200D0DB48 /* post.swift in Sources */,
+				59DE6C321E79EB3600FE0FC7 /* postTableViewCell.swift in Sources */,
+				59DE6C301E79E5A300FE0FC7 /* postTableViewController.swift in Sources */,
 				17665D7F1E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */,
 				590AC8411E79496D008EDBBC /* postListVIewController.swift in Sources */,
 				590AC83B1E748336008EDBBC /* categoryView.swift in Sources */,
