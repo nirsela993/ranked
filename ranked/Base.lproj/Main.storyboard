@@ -233,22 +233,25 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wgR-aU-Qcr">
-                                            <rect key="frame" x="8" y="28.5" width="359" height="400"/>
+                                            <rect key="frame" x="8" y="28.5" width="359" height="405"/>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SM9-8s-8RQ">
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SM9-8s-8RQ">
                                             <rect key="frame" x="8" y="433.5" width="359" height="30"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFD-4U-faf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="113" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocC-lj-blZ">
-                                                    <rect key="frame" x="123" y="0.0" width="113" height="30"/>
-                                                    <color key="backgroundColor" red="0.3242956561" green="1" blue="0.087715319159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="119.5" y="0.0" width="120" height="30"/>
+                                                    <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzW-EZ-Mpf">
-                                                    <rect key="frame" x="246" y="0.0" width="113" height="30"/>
+                                                    <rect key="frame" x="239.5" y="0.0" width="119.5" height="30"/>
+                                                    <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
                                             </subviews>
@@ -267,7 +270,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="KsX-Xn-Gza" secondAttribute="trailing" id="jZ4-KT-UwL"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="SM9-8s-8RQ" secondAttribute="trailing" id="k5C-s1-pvW"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="wgR-aU-Qcr" secondAttribute="trailing" id="ncG-pX-oAW"/>
-                                        <constraint firstItem="SM9-8s-8RQ" firstAttribute="top" secondItem="wgR-aU-Qcr" secondAttribute="bottom" constant="5" id="sPM-3H-axh"/>
+                                        <constraint firstItem="SM9-8s-8RQ" firstAttribute="top" secondItem="wgR-aU-Qcr" secondAttribute="bottom" id="sPM-3H-axh"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="SM9-8s-8RQ" secondAttribute="bottom" constant="7.5" id="yZE-XH-LKR"/>
                                     </constraints>
                                 </tableViewCellContentView>
