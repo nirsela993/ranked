@@ -1,13 +1,14 @@
 //
-//  post.swift
+//  Post.swift
 //  ranked
 //
-//  Created by Nir Sela on 3/15/17.
+//  Created by macDevMachinVB on 16/03/2017.
 //  Copyright © 2017 Nir Sela. All rights reserved.
 //
 
 import Foundation
 import FirebaseDatabase
+
 
 class Post {
     var id:String
@@ -45,7 +46,7 @@ class Post {
         json["dislikes"] = dislikes
         json["latitube"] = dislikes
         json["longtibute"] = dislikes
-//        json["timestamp"] = FIRServerValue.timestamp()
+        //        json["timestamp"] = FIRServerValue.timestamp()
         return json
     }
     
