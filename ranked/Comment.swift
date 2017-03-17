@@ -11,9 +11,9 @@ import UIKit
 class Comment: NSObject {
     var text:String
     var author:String
-    var dateCreated:Date
+    var dateCreated:String
     
-    init(author:String,text:String,dateCreated:Date){
+    init(author:String,text:String,dateCreated:String){
         self.text = text
         self.author = author
         self.dateCreated = dateCreated

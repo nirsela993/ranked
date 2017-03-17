@@ -31,9 +31,9 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     
     func loadPosts(categoyName : String)->[Post]{
         let comments = [
-            Comment(author: "omer", text: "Ios is the best i love it so much it makes me cry", dateCreated: Date()),
-            Comment(author: "nirssim", text: "lol this is funny i love it", dateCreated: Date()),
-            Comment(author: "victor", text: "android sucks", dateCreated: Date())
+            Comment(author: "omer", text: "Ios is the best i love it so much it makes me cry", dateCreated: "12.12"),
+            Comment(author: "nirssim", text: "lol this is funny i love it", dateCreated: "13.12"),
+            Comment(author: "victor", text: "android sucks", dateCreated: "14.23")
         ]
         let tempPosts = ["yolo-","i love ","ios is the best - "]
         var returnPosts:[Post] = []

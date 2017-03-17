@@ -23,7 +23,6 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
         
     }
     func loadPostToView(){
-        print(self.activePost?.title ?? "nil")
         self.postTitle.text = self.activePost?.title ?? "title"
         
     }
@@ -45,6 +44,10 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
         
         if let commentCell = cell as? commentTableViewCell {
             commentCell.comment = activePost?.comments[indexPath.row]
+            commentCell.authorName.text = commentCell.comment?.author
+            commentCell.commentMessage.text = commentCell.comment?.text
+            commentCell.creationDate.text = commentCell.comment?.dateCreated
+            
         }
         
         return cell

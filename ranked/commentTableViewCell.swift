@@ -12,12 +12,17 @@ class commentTableViewCell: UITableViewCell {
 
     var comment:Comment?
     
+    @IBOutlet weak var commentMessage: UILabel!
+    @IBOutlet weak var authorName: UILabel!
+    @IBOutlet weak var creationDate: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
