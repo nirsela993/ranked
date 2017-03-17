@@ -38,7 +38,7 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
         let tempPosts = ["yolo-","i love ","ios is the best - "]
         var returnPosts:[Post] = []
         for postTitle in tempPosts {
-            let tempPost:Post = Post(id: "ids", category: self.categoryName!, authorNickname: "nirNissim", picture: "pictureurl", title: postTitle+self.categoryName!, uploadDate: "12.12.12", likes: 20, dislikes: 2, latitube: 10, longtibute: 10, comments: comments)
+            let tempPost:Post = Post(id: "ids", category: self.categoryName!, authorNickname: "nirNissim", picture: "pictureurl", title: postTitle+self.categoryName!, uploadDate: "12.12.12", likes: 20, dislikes: 2, latitude: 10, longitude: 10, comments: comments)
             
             
             tempPost.title = postTitle+self.categoryName!

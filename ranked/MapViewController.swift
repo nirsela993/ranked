@@ -25,14 +25,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
         self.locationManager.requestWhenInUseAuthorization();
         self.locationManager.startUpdatingLocation();
         
-        let location = CLLocationCoordinate2DMake(32, 30);
-        let annotation = MKPointAnnotation();
-        annotation.coordinate = location;
-        annotation.title = "HOME";
-        annotation.subtitle = "Sweet Home";
-        
-        self.Map.addAnnotation(annotation);
-        
+        PostModel.instance.getAllPosts(callback: self.addPostLocations)
+                
         self.Map.showsUserLocation = true;
     }
 
@@ -55,15 +49,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
         print("Errors: " + error.localizedDescription);
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func addPostLocations(posts:[Post]){
+        for post in posts {
+            let location = CLLocationCoordinate2DMake(post.latitude, post.longitude)
+            let annotation = MKPointAnnotation();
+            annotation.coordinate = location;
+            annotation.title = post.title;
+            annotation.subtitle = post.authorNickname;
+            self.Map.addAnnotation(annotation);
+        }
     }
-    */
 
 }
