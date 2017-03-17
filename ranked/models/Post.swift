@@ -41,7 +41,6 @@ class Post {
     init(json:Dictionary<String,Any>){
         id = json["id"] as! String
         authorNickname = json["authorNickname"] as! String
-        category = json["category"] as! String
         picture = json["picture"] as! String
         title = json["title"] as! String
         uploadDate = json["uploadDate"] as! String
@@ -49,7 +48,7 @@ class Post {
         dislikes = json["dislikes"] as! Int
         latitude = json["latitude"] as! Double
         longitude = json["longitude"] as! Double
-        authorNickname = json["category"] as! String
+        category = json["category"] as! String
         
         // LOAD COMMENTS HERE NOT DONE
         comments = []//json["comments"] as! [Comment]

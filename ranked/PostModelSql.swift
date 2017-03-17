@@ -65,14 +65,24 @@ extension Post{
             let id = self.id.cString(using: .utf8)
             let authorNickname = self.authorNickname.cString(using: .utf8)
             let picture = self.picture.cString(using: .utf8)
+            let category = self.category.cString(using: .utf8)
+            let uploadDate = self.uploadDate.cString(using: .utf8)
+            let titel = self.title.cString(using: .utf8);
             
             sqlite3_bind_text(sqlite3_stmt, 1, id,-1,nil);
             sqlite3_bind_text(sqlite3_stmt, 2, authorNickname,-1,nil);
             sqlite3_bind_text(sqlite3_stmt, 3, picture,-1,nil);
+            sqlite3_bind_text(sqlite3_stmt, 4, category, -1, nil);
+            sqlite3_bind_int(sqlite3_stmt, 5, Int32(self.likes));
+            sqlite3_bind_int(sqlite3_stmt, 6, Int32(self.dislikes));
+            sqlite3_bind_double(sqlite3_stmt, 7, self.latitude);
+            sqlite3_bind_double(sqlite3_stmt, 8, self.longitude);
+            sqlite3_bind_text(sqlite3_stmt, 9, uploadDate, -1, nil);
+            sqlite3_bind_text(sqlite3_stmt, 10, titel, -1, nil)
             if (lastUpdate == nil){
                 lastUpdate = Date()
             }
-            sqlite3_bind_double(sqlite3_stmt, 4, lastUpdate!.toFirebase());
+            sqlite3_bind_double(sqlite3_stmt, 11, lastUpdate!.toFirebase());
             
             if(sqlite3_step(sqlite3_stmt) == SQLITE_DONE){
                 print("new row added succefully")
