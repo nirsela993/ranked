@@ -16,6 +16,7 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     var activePost:Post?
     var commentsController :commentsViewController?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if (self.categoryName != nil){
@@ -29,10 +30,15 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     }
     
     func loadPosts(categoyName : String)->[Post]{
+        let comments = [
+            Comment(author: "omer", text: "Ios is the best i love it so much it makes me cry", dateCreated: Date()),
+            Comment(author: "nirssim", text: "lol this is funny i love it", dateCreated: Date()),
+            Comment(author: "victor", text: "android sucks", dateCreated: Date())
+        ]
         let tempPosts = ["yolo-","i love ","ios is the best - "]
         var returnPosts:[Post] = []
         for postTitle in tempPosts {
-            let tempPost:Post = Post(id: "df", category: self.categoryName!, authorNickname: "nirnissim", picture: "pic", title: "", uploadDate: Date(), likes: 12, dislikes: 1, latitube: 12, longtibute: 12, timestamp: 12)
+            let tempPost:Post = Post(id: "df", category: self.categoryName!, authorNickname: "nirnissim", picture: "pic", title: "", uploadDate: Date(), likes: 12, dislikes: 1, latitube: 12, longtibute: 12, timestamp: 12, comments: comments)
             
             tempPost.title = postTitle+self.categoryName!
             returnPosts.append( tempPost )
@@ -62,21 +68,13 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     self.commentsController?.activePost = self.posts?[indexPath.row]
-//        self.commentsController?.loadPostToView()
-        print("did select")
+        self.commentsController?.activePost = self.posts?[indexPath.row]
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "showCommentsSegue"){
-//            let controller = (segue.destination as! commentsViewController)
-            
             self.commentsController = (segue.destination as! commentsViewController)
-            
-            
-//            controller.activePost = self.activePost
-            print("prepared for segue")
         }
     }
 }

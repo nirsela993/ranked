@@ -8,7 +8,7 @@
 
 import UIKit
 
-class commentsViewController: UIViewController {
+class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
     var activePost:Post?
     
@@ -32,4 +32,21 @@ class commentsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.activePost?.comments.count ?? 0
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "commentTableCell", for: indexPath)
+        
+        if let commentCell = cell as? commentTableViewCell {
+            commentCell.comment = activePost?.comments[indexPath.row]
+        }
+        
+        return cell
+    }
 }
