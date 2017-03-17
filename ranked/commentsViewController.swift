@@ -15,18 +15,21 @@ class commentsViewController: UIViewController {
     @IBOutlet weak var postTitle: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if self.activePost != nil {
-//         
-//        }
         // Do any additional setup after loading the view.
     }
-    func loadPostToView(){
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadPostToView()
         
-//        self.postTitle.text = activePost?.title
+    }
+    func loadPostToView(){
+        print(self.activePost?.title ?? "nil")
+        self.postTitle.text = self.activePost?.title ?? "title"
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }

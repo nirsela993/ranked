@@ -63,7 +63,7 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
      self.commentsController?.activePost = self.posts?[indexPath.row]
-        self.commentsController?.loadPostToView()
+//        self.commentsController?.loadPostToView()
         print("did select")
         
     }
