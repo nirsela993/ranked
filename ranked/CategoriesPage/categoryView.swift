@@ -58,4 +58,12 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
         
         return cell
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier == "showCommentsSegue"){
+//            let controller = (segue.destination as! commentsViewController)
+//            
+//            
+//        }
+//    }
 }

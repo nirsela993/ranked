@@ -10,6 +10,8 @@ import UIKit
 
 class postTableViewCell: UITableViewCell {
 
+    var activePost :Post?
+    
     @IBOutlet weak var UIpostTitle: UILabel!
     
     override func awakeFromNib() {
@@ -17,6 +19,11 @@ class postTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+    
+    func loadPost(){
+        self.UIpostTitle.text = activePost?.title
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

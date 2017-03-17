@@ -214,12 +214,13 @@
         <scene sceneID="1Ur-7Y-PNN">
             <objects>
                 <viewController title="Category View" id="zbP-dV-0nn" customClass="categoryView" customModule="ranked" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="409" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xbp-57-63a">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="409" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xbp-57-63a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postTableCell" rowHeight="480" id="lEW-T0-BDv" customClass="postTableViewCell" customModule="ranked" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postTableCell" rowHeight="480" id="lEW-T0-BDv" customClass="postTableViewCell" customModule="ranked" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="480"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lEW-T0-BDv" id="tNZ-ja-65s">
@@ -244,9 +245,6 @@
                                                     <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Comments"/>
-                                                    <connections>
-                                                        <segue destination="RM3-Uz-RPc" kind="show" id="oHL-Ow-Mfg"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocC-lj-blZ">
                                                     <rect key="frame" x="119.5" y="0.0" width="120" height="30"/>
@@ -283,6 +281,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="UIpostTitle" destination="KsX-Xn-Gza" id="9yF-9W-EzA"/>
+                                    <segue destination="RM3-Uz-RPc" kind="show" id="ZzZ-XG-J9Q"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -300,10 +299,10 @@
             </objects>
             <point key="canvasLocation" x="-1626.4000000000001" y="1915.5922038980511"/>
         </scene>
-        <!--View Controller-->
+        <!--Comments View Controller-->
         <scene sceneID="3H1-5X-RBI">
             <objects>
-                <viewController id="RM3-Uz-RPc" sceneMemberID="viewController">
+                <viewController id="RM3-Uz-RPc" customClass="commentsViewController" customModule="ranked" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gsP-0S-L1G"/>
                         <viewControllerLayoutGuide type="bottom" id="Ure-Gf-2bm"/>
@@ -353,10 +352,13 @@
                             <constraint firstItem="HAQ-6I-PHR" firstAttribute="top" secondItem="fzy-yd-qPX" secondAttribute="bottom" constant="5" id="oP6-cc-BQQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="postTitle" destination="fzy-yd-qPX" id="9L7-NR-ga0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOw-mx-7jk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1036.5" y="1915.5"/>
+            <point key="canvasLocation" x="-871" y="1916"/>
         </scene>
         <!--Vote-->
         <scene sceneID="DM3-Ny-IjD">
@@ -491,6 +493,6 @@
         <image name="vote" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="F9R-mv-b89"/>
+        <segue reference="PJF-2F-uK7"/>
     </inferredMetricsTieBreakers>
 </document>
