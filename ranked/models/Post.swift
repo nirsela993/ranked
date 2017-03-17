@@ -24,7 +24,7 @@ class Post {
     var lastUpdate:Date?
     var comments:[Comment]
     
-    init(id:String,category:String, authorNickname:String, picture:String, title:String, uploadDate:String, likes:Int, dislikes:Int, latitube:Double, longtibute:Double) {
+    init(id:String,category:String, authorNickname:String, picture:String, title:String, uploadDate:String, likes:Int, dislikes:Int, latitube:Double, longtibute:Double,comments:[Comment]) {
         self.id = id
         self.authorNickname = authorNickname
         self.picture = picture
@@ -34,7 +34,6 @@ class Post {
         self.dislikes = dislikes
         self.latitube = latitube
         self.longtibute = longtibute
-        self.timestamp = timestamp
         self.category = category
         self.comments = comments
     }
@@ -51,6 +50,9 @@ class Post {
         latitube = json["latitube"] as! Double
         longtibute = json["longtibute"] as! Double
         authorNickname = json["category"] as! String
+        
+        // LOAD COMMENTS HERE NOT DONE
+        comments = json["comments"] as! [Comment]
         if let ts = json["lastUpdate"] as? Double{
             self.lastUpdate = Date.fromFirebase(ts)
         }
