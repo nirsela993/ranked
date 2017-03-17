@@ -4,6 +4,8 @@
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>App needs your location because of reasons.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Give me all your pictures!!</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
