@@ -10,8 +10,8 @@ import UIKit
 
 class CategoriesViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
 
-    var categorieNames: [String] = ["Funny","Food","Cute","WTF","Funny","Food","Cute","WTF"]
-    var categoryImages: [String] = ["Funny.png","food.png","cute.png","wtf.png","Funny.png","food.png","cute.png","wtf.png"]
+    var categorieNames: [String] = PostModel.categoriesNames
+    var categoryImages: [UIImage] = PostModel.categoriesImages
     
     
     
@@ -26,7 +26,7 @@ class CategoriesViewController: UIViewController,UICollectionViewDataSource,UICo
 
         cell.cellLable.text = self.categorieNames[indexPath.row]
         
-        cell.cellImage.image =  UIImage(named: self.categoryImages[indexPath.row])
+        cell.cellImage.image =  self.categoryImages[indexPath.row]
         
         return cell
     }
