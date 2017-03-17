@@ -8,27 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1708C6431E75AF1300F0CF42 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708C6421E75AF1300F0CF42 /* NewItemViewController.swift */; };
-		1708C6441E75AF1300F0CF42 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708C6421E75AF1300F0CF42 /* NewItemViewController.swift */; };
-		1708C6451E75AF1300F0CF42 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708C6421E75AF1300F0CF42 /* NewItemViewController.swift */; };
 		17665D7B1E7987A600D0DB48 /* PostModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17665D7A1E7987A600D0DB48 /* PostModelFirebase.swift */; };
-		17665D7C1E7987A600D0DB48 /* PostModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17665D7A1E7987A600D0DB48 /* PostModelFirebase.swift */; };
-		17665D7D1E7987A600D0DB48 /* PostModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17665D7A1E7987A600D0DB48 /* PostModelFirebase.swift */; };
 		17665D7F1E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */; };
 		17665D801E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */; };
 		17665D811E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */; };
 		177EDA671E7C02A1003686E5 /* PostModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EDA661E7C02A1003686E5 /* PostModelSql.swift */; };
-		177EDA681E7C02A1003686E5 /* PostModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EDA661E7C02A1003686E5 /* PostModelSql.swift */; };
-		177EDA691E7C02A1003686E5 /* PostModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EDA661E7C02A1003686E5 /* PostModelSql.swift */; };
 		177EDA6F1E7C1313003686E5 /* sqlite3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177EDA6E1E7C1313003686E5 /* sqlite3.framework */; };
 		178FBADB1E7BF31F000E0E40 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADA1E7BF31F000E0E40 /* PostModel.swift */; };
-		178FBADC1E7BF31F000E0E40 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADA1E7BF31F000E0E40 /* PostModel.swift */; };
-		178FBADD1E7BF31F000E0E40 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADA1E7BF31F000E0E40 /* PostModel.swift */; };
 		178FBADF1E7BF33D000E0E40 /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADE1E7BF33D000E0E40 /* ModelSql.swift */; };
-		178FBAE01E7BF33D000E0E40 /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADE1E7BF33D000E0E40 /* ModelSql.swift */; };
-		178FBAE11E7BF33D000E0E40 /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADE1E7BF33D000E0E40 /* ModelSql.swift */; };
 		178FBAE31E7BF6AC000E0E40 /* LastUpdateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBAE21E7BF6AC000E0E40 /* LastUpdateTable.swift */; };
-		178FBAE41E7BF6AC000E0E40 /* LastUpdateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBAE21E7BF6AC000E0E40 /* LastUpdateTable.swift */; };
-		178FBAE51E7BF6AC000E0E40 /* LastUpdateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBAE21E7BF6AC000E0E40 /* LastUpdateTable.swift */; };
 		17F4E5E71E7200FD0085960F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E5E61E7200FD0085960F /* AppDelegate.swift */; };
 		17F4E5E91E7200FD0085960F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E5E81E7200FD0085960F /* ViewController.swift */; };
 		17F4E5EC1E7200FD0085960F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F4E5EA1E7200FD0085960F /* Main.storyboard */; };
@@ -38,8 +26,6 @@
 		17F4E6071E7200FD0085960F /* rankedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E6061E7200FD0085960F /* rankedUITests.swift */; };
 		17F4E61E1E72153B0085960F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17F4E61D1E72153B0085960F /* GoogleService-Info.plist */; };
 		17F4E6201E7225C50085960F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E61F1E7225C50085960F /* MapViewController.swift */; };
-		17F4E6211E7225C50085960F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E61F1E7225C50085960F /* MapViewController.swift */; };
-		17F4E6221E7225C50085960F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E61F1E7225C50085960F /* MapViewController.swift */; };
 		17F7A9671E73FAFF00ECBBF0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F7A9661E73FAFF00ECBBF0 /* CoreLocation.framework */; };
 		590AC8351E746B0D008EDBBC /* cute.png in Resources */ = {isa = PBXBuildFile; fileRef = 590AC8341E746B0D008EDBBC /* cute.png */; };
 		590AC8371E7474B6008EDBBC /* wtf.png in Resources */ = {isa = PBXBuildFile; fileRef = 590AC8361E7474B6008EDBBC /* wtf.png */; };
@@ -617,15 +603,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				177EDA681E7C02A1003686E5 /* PostModelSql.swift in Sources */,
 				17665D801E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */,
-				178FBADC1E7BF31F000E0E40 /* PostModel.swift in Sources */,
-				178FBAE01E7BF33D000E0E40 /* ModelSql.swift in Sources */,
 				17F4E5FC1E7200FD0085960F /* rankedTests.swift in Sources */,
-				17F4E6211E7225C50085960F /* MapViewController.swift in Sources */,
-				17665D7C1E7987A600D0DB48 /* PostModelFirebase.swift in Sources */,
-				1708C6441E75AF1300F0CF42 /* NewItemViewController.swift in Sources */,
-				178FBAE41E7BF6AC000E0E40 /* LastUpdateTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,15 +612,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				177EDA691E7C02A1003686E5 /* PostModelSql.swift in Sources */,
 				17665D811E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */,
-				178FBADD1E7BF31F000E0E40 /* PostModel.swift in Sources */,
-				178FBAE11E7BF33D000E0E40 /* ModelSql.swift in Sources */,
 				17F4E6071E7200FD0085960F /* rankedUITests.swift in Sources */,
-				17F4E6221E7225C50085960F /* MapViewController.swift in Sources */,
-				17665D7D1E7987A600D0DB48 /* PostModelFirebase.swift in Sources */,
-				1708C6451E75AF1300F0CF42 /* NewItemViewController.swift in Sources */,
-				178FBAE51E7BF6AC000E0E40 /* LastUpdateTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

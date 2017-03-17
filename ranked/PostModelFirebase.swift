@@ -15,6 +15,40 @@ class PostModelFirebase {
         FIRApp.configure()
     }
     
+    lazy var storageRef = FIRStorage.storage().reference(forURL: "gs://firstfirebase-ae1be.appspot.com/")
+    
+    func saveImageToFirebase(image:UIImage, name:(String), callback:@escaping (String?)->Void){
+        let filesRef = storageRef.child(name)
+        if let data = UIImageJPEGRepresentation(image, 0.5) {
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpg"
+            filesRef.put(data, metadata: metaData) {
+                metadata, error in if (error != nil) {
+                    callback(nil)
+                }
+                else {
+                    let downloadURL = metadata!.downloadURL()
+                    callback(downloadURL?.absoluteString)
+                }
+            }
+        }
+    }
+    func getImageFromFirebase(url:String, callback:@escaping (UIImage?)->Void){
+        let ref = FIRStorage.storage().reference(forURL: url)
+        ref.data(withMaxSize: 10000000, completion: {(data, error) in
+            if (error == nil && data != nil){
+                let image = UIImage(data: data!)
+                callback(image)
+            }
+            else{
+                callback(nil)
+            }
+        })
+    }
+
+    
+    
+    
     func addPost(post:Post, completionBlock:@escaping (Error?)->Void){
         let ref = FIRDatabase.database().reference().child("posts").child(post.id)
         ref.setValue(post.toFirebase())

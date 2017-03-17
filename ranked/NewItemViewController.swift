@@ -86,18 +86,24 @@ class NewItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.UserLongitude = location.coordinate.longitude;
     }
     @IBAction func ClearField(_ sender: UIButton) {
+        PostModel.instance.getImage(urlStr: self.FieldAuthor.text!, callback: {(image) in self.self.SelectedImageView.image = image})
         self.FieldTitle.text = "";
         self.FieldAuthor.text = "";
-        self.SelectedImageView.image = nil;
+        //self.SelectedImageView.image = nil;
     }
     @IBAction func SaveNewItem(_ sender: UIButton) {
-        self.FieldTitle.text = self.UserLongitude.debugDescription + "  " + self.UserLatitude.debugDescription;
+        
+        let image = self.SelectedImageView.image;
+        let imagename = self.FieldTitle.text;
+        PostModel.instance.saveImage(image: image!, name: imagename!, callback: {(url)  in self.FieldAuthor.text = url})
+        
+        //self.FieldTitle.text = self.UserLongitude.debugDescription + "  " + self.UserLatitude.debugDescription;
         
         let date = Date();
         let dateFormatter = DateFormatter();
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss";
         let a=dateFormatter.string(from: date);
-        self.FieldAuthor.text = a;
+        //self.FieldAuthor.text = a;
 
     }
 }
