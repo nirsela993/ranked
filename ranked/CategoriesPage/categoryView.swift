@@ -13,6 +13,8 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     @IBOutlet var navigationTitle: UINavigationItem!
     var categoryName:String?
     var posts:[Post]?
+    var activePost:Post?
+    var commentsController :commentsViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,11 +61,22 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier == "showCommentsSegue"){
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     self.commentsController?.activePost = self.posts?[indexPath.row]
+        self.commentsController?.loadPostToView()
+        print("did select")
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "showCommentsSegue"){
 //            let controller = (segue.destination as! commentsViewController)
-//            
-//            
-//        }
-//    }
+            
+            self.commentsController = (segue.destination as! commentsViewController)
+            
+            
+//            controller.activePost = self.activePost
+            print("prepared for segue")
+        }
+    }
 }
