@@ -16,6 +16,19 @@
 		17665D7F1E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */; };
 		17665D801E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */; };
 		17665D811E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */; };
+		177EDA671E7C02A1003686E5 /* PostModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EDA661E7C02A1003686E5 /* PostModelSql.swift */; };
+		177EDA681E7C02A1003686E5 /* PostModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EDA661E7C02A1003686E5 /* PostModelSql.swift */; };
+		177EDA691E7C02A1003686E5 /* PostModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EDA661E7C02A1003686E5 /* PostModelSql.swift */; };
+		177EDA6F1E7C1313003686E5 /* sqlite3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177EDA6E1E7C1313003686E5 /* sqlite3.framework */; };
+		178FBADB1E7BF31F000E0E40 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADA1E7BF31F000E0E40 /* PostModel.swift */; };
+		178FBADC1E7BF31F000E0E40 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADA1E7BF31F000E0E40 /* PostModel.swift */; };
+		178FBADD1E7BF31F000E0E40 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADA1E7BF31F000E0E40 /* PostModel.swift */; };
+		178FBADF1E7BF33D000E0E40 /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADE1E7BF33D000E0E40 /* ModelSql.swift */; };
+		178FBAE01E7BF33D000E0E40 /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADE1E7BF33D000E0E40 /* ModelSql.swift */; };
+		178FBAE11E7BF33D000E0E40 /* ModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBADE1E7BF33D000E0E40 /* ModelSql.swift */; };
+		178FBAE31E7BF6AC000E0E40 /* LastUpdateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBAE21E7BF6AC000E0E40 /* LastUpdateTable.swift */; };
+		178FBAE41E7BF6AC000E0E40 /* LastUpdateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBAE21E7BF6AC000E0E40 /* LastUpdateTable.swift */; };
+		178FBAE51E7BF6AC000E0E40 /* LastUpdateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FBAE21E7BF6AC000E0E40 /* LastUpdateTable.swift */; };
 		17F4E5E71E7200FD0085960F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E5E61E7200FD0085960F /* AppDelegate.swift */; };
 		17F4E5E91E7200FD0085960F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F4E5E81E7200FD0085960F /* ViewController.swift */; };
 		17F4E5EC1E7200FD0085960F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F4E5EA1E7200FD0085960F /* Main.storyboard */; };
@@ -68,6 +81,12 @@
 		1708C6421E75AF1300F0CF42 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		17665D7A1E7987A600D0DB48 /* PostModelFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModelFirebase.swift; sourceTree = "<group>"; };
 		17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModelFirebase.swift; sourceTree = "<group>"; };
+		177EDA661E7C02A1003686E5 /* PostModelSql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModelSql.swift; sourceTree = "<group>"; };
+		177EDA6C1E7C12E3003686E5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		177EDA6E1E7C1313003686E5 /* sqlite3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sqlite3.framework; path = "../../../Library/Developer/Xcode/DerivedData/ranked-evbsugahwrbeqzenzqurafmmwwbl/Build/Products/Debug-iphonesimulator/sqlite3/sqlite3.framework"; sourceTree = "<group>"; };
+		178FBADA1E7BF31F000E0E40 /* PostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		178FBADE1E7BF33D000E0E40 /* ModelSql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelSql.swift; sourceTree = "<group>"; };
+		178FBAE21E7BF6AC000E0E40 /* LastUpdateTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastUpdateTable.swift; sourceTree = "<group>"; };
 		17F4E5E31E7200FD0085960F /* ranked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ranked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F4E5E61E7200FD0085960F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17F4E5E81E7200FD0085960F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177EDA6F1E7C1313003686E5 /* sqlite3.framework in Frameworks */,
 				59CD57BA1E79DBDC00E12AB5 /* GoogleToolboxForMac.framework in Frameworks */,
 				17F7A9671E73FAFF00ECBBF0 /* CoreLocation.framework in Frameworks */,
 				E192021628AF98541CB4257F /* Pods_ranked.framework in Frameworks */,
@@ -142,6 +162,8 @@
 		02B6FA1CB0F89F3D9A38F7A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				177EDA6E1E7C1313003686E5 /* sqlite3.framework */,
+				177EDA6C1E7C12E3003686E5 /* libsqlite3.tbd */,
 				59CD57B91E79DBDC00E12AB5 /* GoogleToolboxForMac.framework */,
 				17F7A9661E73FAFF00ECBBF0 /* CoreLocation.framework */,
 				7CF81D44AC2B85AC4DF30804 /* Pods_ranked.framework */,
@@ -149,6 +171,26 @@
 				8E922B6AB52C06CFF7B67DDB /* Pods_rankedUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		177EDA6A1E7C02B5003686E5 /* post */ = {
+			isa = PBXGroup;
+			children = (
+				17665D7A1E7987A600D0DB48 /* PostModelFirebase.swift */,
+				59DE6C3B1E7ADC1200FE0FC7 /* Post.swift */,
+				178FBADA1E7BF31F000E0E40 /* PostModel.swift */,
+				177EDA661E7C02A1003686E5 /* PostModelSql.swift */,
+			);
+			name = post;
+			sourceTree = "<group>";
+		};
+		177EDA6B1E7C02D2003686E5 /* comment */ = {
+			isa = PBXGroup;
+			children = (
+				17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */,
+				59DE6C3D1E7AFE3000FE0FC7 /* Comment.swift */,
+			);
+			name = comment;
 			sourceTree = "<group>";
 		};
 		17F4E5DA1E7200FD0085960F = {
@@ -215,10 +257,10 @@
 		17F4E6181E720BC70085960F /* models */ = {
 			isa = PBXGroup;
 			children = (
-				17665D7A1E7987A600D0DB48 /* PostModelFirebase.swift */,
-				17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */,
-				59DE6C3D1E7AFE3000FE0FC7 /* Comment.swift */,
-				59DE6C3B1E7ADC1200FE0FC7 /* Post.swift */,
+				177EDA6B1E7C02D2003686E5 /* comment */,
+				177EDA6A1E7C02B5003686E5 /* post */,
+				178FBADE1E7BF33D000E0E40 /* ModelSql.swift */,
+				178FBAE21E7BF6AC000E0E40 /* LastUpdateTable.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -546,15 +588,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177EDA671E7C02A1003686E5 /* PostModelSql.swift in Sources */,
 				59DE6C321E79EB3600FE0FC7 /* postTableViewCell.swift in Sources */,
+				178FBADB1E7BF31F000E0E40 /* PostModel.swift in Sources */,
 				17665D7F1E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */,
 				590AC8411E79496D008EDBBC /* postListVIewController.swift in Sources */,
 				59DE6C3C1E7ADC1200FE0FC7 /* Post.swift in Sources */,
 				590AC83B1E748336008EDBBC /* categoryView.swift in Sources */,
+				178FBAE31E7BF6AC000E0E40 /* LastUpdateTable.swift in Sources */,
 				17F4E5E91E7200FD0085960F /* ViewController.swift in Sources */,
 				17F4E6201E7225C50085960F /* MapViewController.swift in Sources */,
 				17665D7B1E7987A600D0DB48 /* PostModelFirebase.swift in Sources */,
 				59DE6C401E7B07A000FE0FC7 /* commentsViewController.swift in Sources */,
+				178FBADF1E7BF33D000E0E40 /* ModelSql.swift in Sources */,
 				59DE6C3E1E7AFE3000FE0FC7 /* Comment.swift in Sources */,
 				17F4E5E71E7200FD0085960F /* AppDelegate.swift in Sources */,
 				59D024071E7427E200CB04B3 /* CategoryCell.swift in Sources */,
@@ -567,11 +613,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177EDA681E7C02A1003686E5 /* PostModelSql.swift in Sources */,
 				17665D801E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */,
+				178FBADC1E7BF31F000E0E40 /* PostModel.swift in Sources */,
+				178FBAE01E7BF33D000E0E40 /* ModelSql.swift in Sources */,
 				17F4E5FC1E7200FD0085960F /* rankedTests.swift in Sources */,
 				17F4E6211E7225C50085960F /* MapViewController.swift in Sources */,
 				17665D7C1E7987A600D0DB48 /* PostModelFirebase.swift in Sources */,
 				1708C6441E75AF1300F0CF42 /* NewItemViewController.swift in Sources */,
+				178FBAE41E7BF6AC000E0E40 /* LastUpdateTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,11 +629,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177EDA691E7C02A1003686E5 /* PostModelSql.swift in Sources */,
 				17665D811E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */,
+				178FBADD1E7BF31F000E0E40 /* PostModel.swift in Sources */,
+				178FBAE11E7BF33D000E0E40 /* ModelSql.swift in Sources */,
 				17F4E6071E7200FD0085960F /* rankedUITests.swift in Sources */,
 				17F4E6221E7225C50085960F /* MapViewController.swift in Sources */,
 				17665D7D1E7987A600D0DB48 /* PostModelFirebase.swift in Sources */,
 				1708C6451E75AF1300F0CF42 /* NewItemViewController.swift in Sources */,
+				178FBAE51E7BF6AC000E0E40 /* LastUpdateTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
