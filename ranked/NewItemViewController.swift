@@ -92,5 +92,12 @@ class NewItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     @IBAction func SaveNewItem(_ sender: UIButton) {
         self.FieldTitle.text = self.UserLongitude.debugDescription + "  " + self.UserLatitude.debugDescription;
+        
+        let date = Date();
+        let dateFormatter = DateFormatter();
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss";
+        let a=dateFormatter.string(from: date);
+        self.FieldAuthor.text = a;
+
     }
 }
