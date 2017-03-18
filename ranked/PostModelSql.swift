@@ -112,7 +112,7 @@ extension Post{
                 
                 let post = Post(id: postId!,category:category!, authorNickname: authorNickname!,
                                 picture: picture!, title:title!, uploadDate:uploadDate!, likes:likes,
-                                dislikes:dislikes, latitude:latitude, longitude:longitude,comments:[])
+                                dislikes:dislikes, latitude:latitude, longitude:longitude,comments:Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
                 posts.append(post)
             }
         }
@@ -145,7 +145,8 @@ extension Post{
                 
                 let post = Post(id: postId!,category:categoryName, authorNickname: authorNickname!,
                                 picture: picture!, title:title!, uploadDate:uploadDate!, likes:likes,
-                                dislikes:dislikes, latitude:latitude, longitude:longitude,comments:[])
+                                dislikes:dislikes, latitude:latitude, longitude:longitude,comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
+                
                 posts.append(post)
             }
         }
