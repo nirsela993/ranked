@@ -94,6 +94,7 @@ class NewItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func SaveNewItem(_ sender: UIButton) {
         let date = Date();
         let dateFormatter = DateFormatter();
+        dateFormatter.timeZone = TimeZone.current
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss";
         let uploadDate = dateFormatter.string(from: date)
 
