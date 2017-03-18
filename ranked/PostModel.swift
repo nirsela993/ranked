@@ -105,7 +105,9 @@ class PostModel{
     
     
     
-    func getPostsByCategory(id:String, callback:@escaping (Post)->Void){
+    func getPostsByCategory(categoryName:String, callback:@escaping ([Post])->Void){
+        let postsByCategory = Post.getAllPostsByCategoryFromLocalDb(categoryName: categoryName, database: self.modelSql?.database)
+        callback(postsByCategory)
     }
     
     func getAllPosts(callback:@escaping ([Post])->Void){
