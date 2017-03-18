@@ -11,10 +11,12 @@ import UIKit
 class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     
     @IBOutlet var navigationTitle: UINavigationItem!
+    @IBOutlet weak var postsTableView: UITableView!
     var categoryName:String?
     var posts:[Post]?
     var activePost:Post?
     var commentsController :commentsViewController?
+    
     
     
     override func viewDidLoad() {
@@ -28,23 +30,24 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
         
         self.posts = self.loadPosts(categoyName: self.categoryName!)
     }
+    /*
+     func viewWillAppear(_ animated: Bool) {
+     super.viewWillAppear(animated)
+     
+     
+     }
+     */
     
     func loadPosts(categoyName : String)->[Post]{
-        let comments = [
-            Comment(postId:"ab",author: "omer", text: "Ios is the best i love it so much it makes me cry", dateCreated: "12.12"),
-            Comment(postId:"ab",author: "nirssim", text: "lol this is funny i love it", dateCreated: "13.12"),
-            Comment(postId:"ab",author: "victor", text: "android sucks", dateCreated: "14.23")
-        ]
-        let tempPosts = ["yolo-","i love ","ios is the best - "]
-        var returnPosts:[Post] = []
-        for postTitle in tempPosts {
-            let tempPost:Post = Post(id: "ids", category: self.categoryName!, authorNickname: "nirNissim", picture: "pictureurl", title: postTitle+self.categoryName!, uploadDate: "12.12.12", likes: 20, dislikes: 2, latitude: 10, longitude: 10, comments: comments)
-            
-            
-            tempPost.title = postTitle+self.categoryName!
-            returnPosts.append( tempPost )
-        }
-        return returnPosts
+
+        
+        PostModel.instance.getPostsByCategory(categoryName: categoryName!, callback:{ (posts) in
+            self.posts = posts
+            self.postsTableView.reloadData()
+        })
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
