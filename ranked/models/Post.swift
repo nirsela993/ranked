@@ -55,11 +55,6 @@ class Post {
             for comment in commentArr {
                 comments.append(Comment(json: comment as! Dictionary<String, Any>))
             }
-            /*var commentIndex = 0
-            while (commentDictionary[String(commentIndex)] != nil) {
-                comments.append(Comment(json: commentDictionary[String(commentIndex)] as! Dictionary<String, Any>))
-                commentIndex += 1
-            }*/
         }
         if let ts = json["lastUpdate"] as? Double{
             self.lastUpdate = Date.fromFirebase(ts)

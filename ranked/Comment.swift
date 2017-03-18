@@ -6,13 +6,15 @@
 //  Copyright © 2017 Nir Sela. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import FirebaseDatabase
 
 class Comment: NSObject {
     var postId:String
     var text:String
     var author:String
     var dateCreated:String
+    var lastUpdate:Date?
     
     init(postId:String,author:String,text:String,dateCreated:String){
         self.postId = postId
@@ -26,6 +28,9 @@ class Comment: NSObject {
         self.text = json["text"] as! String
         self.author = json["author"] as! String
         self.dateCreated = json["dateCreated"] as! String
+        if let ts = json["lastUpdate"] as? Double{
+            self.lastUpdate = Date.fromFirebase(ts)
+        }
     }
     
     func toFirebase() -> Dictionary<String,Any> {
@@ -34,6 +39,7 @@ class Comment: NSObject {
         json["text"] = self.text
         json["author"] = self.author
         json["dateCreated"] = self.dateCreated
+        json["lastUpdate"] = FIRServerValue.timestamp()
         return json
     }
     
