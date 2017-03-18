@@ -118,6 +118,10 @@ class PostModel{
             var lastUpdate:Date?
             for st in posts{
                 st.addPostToLocalDb(database: self.modelSql?.database)
+                //just s check
+                if st.comments.count > 0{
+                    st.comments[0].addCommentToLocalDb(database: self.modelSql?.database);
+                }
                 if lastUpdate == nil{
                     lastUpdate = st.lastUpdate
                 }else{
@@ -151,6 +155,10 @@ class PostModel{
             var lastUpdate:Date?
             for post in posts{
                 post.addPostToLocalDb(database: self.modelSql?.database)
+                //just s check
+                if post.comments.count > 0{
+                    post.comments[0].addCommentToLocalDb(database: self.modelSql?.database);
+                }
                 if lastUpdate == nil{
                     lastUpdate = post.lastUpdate
                 }else{

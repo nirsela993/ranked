@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseDatabase
 
-class Comment: NSObject {
+class Comment {
     var postId:String
     var text:String
     var author:String

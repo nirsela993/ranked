@@ -62,7 +62,7 @@ extension Comment{
             sqlite3_bind_double(sqlite3_stmt, 6, self.lastUpdate!.toFirebase());
             
             if(sqlite3_step(sqlite3_stmt) == SQLITE_DONE){
-                print("new row added succefully")
+                print("new comment added succefully")
             }
         }
         sqlite3_finalize(sqlite3_stmt)

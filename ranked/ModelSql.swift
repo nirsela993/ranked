@@ -40,9 +40,9 @@ class ModelSql{
         if Post.createTable(database: database) == false{
             return nil
         }
-        //if Comment.createTable(database: database) == false{
-        //    return nil
-        //}
+        if Comment.createTable(database: database) == false{
+            return nil
+        }
         if LastUpdateTable.createTable(database: database) == false{
             return nil
         }
