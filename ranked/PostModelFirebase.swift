@@ -35,7 +35,7 @@ class PostModelFirebase {
     }
     func getImageFromFirebase(url:String, callback:@escaping (UIImage?)->Void){
         let ref = FIRStorage.storage().reference(forURL: url)
-        ref.data(withMaxSize: 100000, completion: {(data, error) in
+        ref.data(withMaxSize: 100000000, completion: {(data, error) in
             if (error == nil && data != nil){
                 let image = UIImage(data: data!)
                 callback(image)
