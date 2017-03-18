@@ -9,25 +9,39 @@
 import UIKit
 
 class postTableViewCell: UITableViewCell {
-
+    
     var activePost :Post?
     
+    @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var UIpostTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
     
-    func loadPost(){
-        self.UIpostTitle.text = activePost?.title
+    
+    func loadPost(postToLoad:Post , callback:@escaping ()->Void){
+        //        postImage.image =
+        //            UIpostTitle.text = title
+        
+        self.activePost = postToLoad
+        self.UIpostTitle.text = self.activePost?.title
+        self.postImage.image = #imageLiteral(resourceName: "Funny")
+        PostModel.instance.getImage(urlStr: (self.activePost?.picture)!, callback: {(image) in
+            self.postImage.image = image
+//            self.layoutSubviews()
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
+//            callback()
+        })
+        self.layoutIfNeeded()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

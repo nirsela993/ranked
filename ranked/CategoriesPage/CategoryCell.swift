@@ -10,7 +10,6 @@ import UIKit
 
 class CategoryCell: UICollectionViewCell {
     @IBOutlet var cellLable: UILabel!
-@IBOutlet var cellImage: UIImageView!
-    
+    @IBOutlet var cellImage: UIImageView!    
 }
 

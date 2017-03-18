@@ -40,12 +40,19 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     
     func loadPosts(categoyName : String){
         print("loading posts for " + categoryName!)
-        PostModel.instance.getPostsByCategory(categoryName: categoryName!, callback:{ (posts) in
-            self.posts = posts
-            print("got posts -> post coutnt = " )
-            print((self.posts?.count ?? "got no data"))
-            self.postsTableView.reloadData()
-        })
+        if(self.categoryName == "home"){
+            PostModel.instance.getAllPosts(callback: {(postsRecived) in
+                self.posts = postsRecived
+                self.postsTableView.reloadData()
+            })
+        } else{
+            PostModel.instance.getPostsByCategory(categoryName: categoryName!, callback:{ (posts) in
+                self.posts = posts
+                print("got posts -> post coutnt = " )
+                print((self.posts?.count ?? "got no data"))
+                self.postsTableView.reloadData()
+            })
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,10 +67,29 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("kill me  pls")
         let cell = tableView.dequeueReusableCell(withIdentifier: "postTableCell", for: indexPath)
         
         if let postCell = cell as? postTableViewCell {
-            postCell.UIpostTitle.text = self.posts?[indexPath.row].title
+            print("loading ----- ")
+            print(self.posts?[indexPath.row].title,indexPath.row)
+            
+            if(postCell.activePost == nil || postCell.activePost?.id != self.posts?[indexPath.row].id ){
+                postCell.loadPost(postToLoad: (self.posts?[indexPath.row])!,callback: {
+                    self.postsTableView.reloadRows(at: [indexPath], with: .none)
+                })
+            }
+            
+            
+            //            if(postCell.activePost == nil){
+            //                PostModel.instance.getImage(urlStr: (self.posts?[indexPath.row].picture)!, callback: {(image) in
+            //                    postCell.loadPost()
+            
+            //                    self.postsTableView.reloadRows(at: [indexPath], with: .none)
+            
+            
+            //                })
+            //        }
         }
         
         return cell

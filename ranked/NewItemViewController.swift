@@ -86,7 +86,6 @@ class NewItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.UserLongitude = location.coordinate.longitude;
     }
     @IBAction func ClearField(_ sender: UIButton) {
-        //PostModel.instance.getImage(urlStr: self.FieldAuthor.text!, callback: {(image) in self.self.SelectedImageView.image = image})
         self.FieldTitle.text = "";
         self.FieldAuthor.text = "";
         self.SelectedImageView.image = nil;

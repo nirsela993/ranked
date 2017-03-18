@@ -270,7 +270,7 @@
                                             </constraints>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="wgR-aU-Qcr" firstAttribute="top" secondItem="KsX-Xn-Gza" secondAttribute="bottom" id="1p3-u1-exo"/>
                                         <constraint firstItem="SM9-8s-8RQ" firstAttribute="leading" secondItem="tNZ-ja-65s" secondAttribute="leadingMargin" id="5rK-LK-Ook"/>
@@ -287,6 +287,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="UIpostTitle" destination="KsX-Xn-Gza" id="9yF-9W-EzA"/>
+                                    <outlet property="postImage" destination="wgR-aU-Qcr" id="gDK-XI-7Cz"/>
                                     <segue destination="RM3-Uz-RPc" kind="show" identifier="showCommentsSegue" id="ZzZ-XG-J9Q"/>
                                 </connections>
                             </tableViewCell>
@@ -454,7 +455,7 @@
             <objects>
                 <navigationController id="oZB-Vq-61d" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="map" selectedImage="map" id="Qk4-Eu-Kar"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="jcQ-Zm-QSt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="jcQ-Zm-QSt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -522,7 +523,7 @@
             <objects>
                 <navigationController id="pro-BG-Nit" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Vote" image="vote" selectedImage="vote" id="5hu-y6-BDV"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="2st-iJ-XJr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="2st-iJ-XJr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
