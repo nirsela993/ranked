@@ -7,4 +7,12 @@
 //
 
 import Foundation
+import Firebase
 
+class CommentModelFirebase {
+    init(){
+        FIRApp.configure()
+}
+
+
+}

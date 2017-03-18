@@ -49,9 +49,18 @@ class Post {
         latitude = json["latitude"] as! Double
         longitude = json["longitude"] as! Double
         category = json["category"] as! String
-        
-        // LOAD COMMENTS HERE NOT DONE
-        comments = []//json["comments"] as! [Comment]
+        comments = []
+        if (json["comments"] != nil){
+            let commentArr = json["comments"] as! NSArray
+            for comment in commentArr {
+                comments.append(Comment(json: comment as! Dictionary<String, Any>))
+            }
+            /*var commentIndex = 0
+            while (commentDictionary[String(commentIndex)] != nil) {
+                comments.append(Comment(json: commentDictionary[String(commentIndex)] as! Dictionary<String, Any>))
+                commentIndex += 1
+            }*/
+        }
         if let ts = json["lastUpdate"] as? Double{
             self.lastUpdate = Date.fromFirebase(ts)
         }
@@ -70,6 +79,11 @@ class Post {
         json["longitude"] = longitude
         json["category"] = category
         json["lastUpdate"] = FIRServerValue.timestamp()
+        var commentsArr : NSArray = []
+        for comment in comments {
+            commentsArr = commentsArr.adding(comment.toFirebase()) as NSArray
+        }
+        json["comments"] = commentsArr
         return json
     }
     
