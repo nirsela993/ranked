@@ -28,7 +28,7 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
             self.categoryName = "home"
         }
         
-        self.posts = self.loadPosts(categoyName: self.categoryName!)
+        self.loadPosts(categoyName: self.categoryName!)
     }
     /*
      func viewWillAppear(_ animated: Bool) {
@@ -38,16 +38,14 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
      }
      */
     
-    func loadPosts(categoyName : String)->[Post]{
-
-        
+    func loadPosts(categoyName : String){
+        print("loading posts for " + categoryName!)
         PostModel.instance.getPostsByCategory(categoryName: categoryName!, callback:{ (posts) in
             self.posts = posts
+            print("got posts -> post coutnt = " )
+            print((self.posts?.count ?? "got no data"))
             self.postsTableView.reloadData()
         })
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {

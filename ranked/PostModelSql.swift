@@ -106,7 +106,7 @@ extension Post{
                 let longitude = Double(sqlite3_column_double(sqlite3_stmt,7))
                 let uploadDate = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,8))
                 let title = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,9))
-
+                
                 
                 // LOAD COMMENTS THIS CODE IS INCORRECT
                 
@@ -124,10 +124,11 @@ extension Post{
         var posts : [Post] = []
         var sqlite3_stmt: OpaquePointer? = nil
         if (sqlite3_prepare_v2(database,"SELECT * from " + TABLE + " WHERE " + CATEGORY + " = ?;",-1,&sqlite3_stmt,nil) == SQLITE_OK){
+            let category = categoryName.cString(using: .utf8)
+            sqlite3_bind_text(sqlite3_stmt, 1, category,-1,nil);
+            
             while(sqlite3_step(sqlite3_stmt) == SQLITE_ROW){
                 
-                let category = categoryName.cString(using: .utf8)
-                sqlite3_bind_text(sqlite3_stmt, 1, category,-1,nil);
                 
                 let postId = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,0))
                 let authorNickname = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,1))
