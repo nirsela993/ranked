@@ -113,10 +113,10 @@ class NewItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             let newPost = Post(id: id, category: self.selectedCategory, authorNickname: autherNick!, picture: picture!, title: titel!, uploadDate: uploadDate, likes: likes, dislikes: dislikes, latitude: self.UserLatitude, longitude: self.UserLongitude, comments: [])
             
             PostModel.instance.addPost(post: newPost)
-            var addAlert = UIAlertView()
-            addAlert.title = "post was saved"
-            addAlert.addButton(withTitle: "OK")
-            addAlert.show()
+
+            let addedAlert = UIAlertController(title: "Saved", message: "Add item successful", preferredStyle: .alert)
+            addedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(addedAlert, animated: true, completion: nil)
         })
         
     }
