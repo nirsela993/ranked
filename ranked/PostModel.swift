@@ -42,7 +42,7 @@ extension Date {
 class PostModel{
     static let instance = PostModel()
     static let categoriesNames = ["funny","food","cute","science","gross","sports","ios","FAIL"]
-    static let categoriesImages = [#imageLiteral(resourceName: "Funny"),#imageLiteral(resourceName: "food"),#imageLiteral(resourceName: "cute"),#imageLiteral(resourceName: "wtf"),#imageLiteral(resourceName: "Funny"), #imageLiteral(resourceName: "Funny"),#imageLiteral(resourceName: "Funny"),#imageLiteral(resourceName: "Funny")]
+    static let categoriesImages = [#imageLiteral(resourceName: "Funny"),#imageLiteral(resourceName: "food"),#imageLiteral(resourceName: "cute"),#imageLiteral(resourceName: "science"),#imageLiteral(resourceName: "gross") ,#imageLiteral(resourceName: "sports"),#imageLiteral(resourceName: "iphone"),#imageLiteral(resourceName: "wtf")]
 
     
     lazy private var modelSql:ModelSql? = ModelSql()
@@ -67,6 +67,15 @@ class PostModel{
         let filename = getDocumentsDirectory().appendingPathComponent(name)
         return UIImage(contentsOfFile:filename.path)
     }
+    
+    private func removeImageFromFile(name:String) {
+        let filePath = getDocumentsDirectory().appendingPathComponent(name)
+        do {
+            try FileManager.default.removeItem(at: filePath)
+        } catch let error as NSError {
+            print(error.debugDescription)
+        }}
+    
     func saveImage(image:UIImage, name:String, callback:@escaping (String?)->Void){
         //1. save image to Firebase
         modelFirebase?.saveImageToFirebase(image: image, name: name, callback: {(url) in

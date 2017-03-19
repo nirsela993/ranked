@@ -25,7 +25,7 @@ class postTableViewCell: UITableViewCell {
 
         self.activePost = postToLoad
         self.UIpostTitle.text = self.activePost?.title
-        self.postImage.image = #imageLiteral(resourceName: "Funny")
+        self.postImage.image = #imageLiteral(resourceName: "loading")
         PostModel.instance.getImage(urlStr: (self.activePost?.picture)!, callback: {(image) in
             self.postImage.image = image
             self.setNeedsLayout()
