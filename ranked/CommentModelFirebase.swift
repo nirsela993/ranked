@@ -11,7 +11,7 @@ import Firebase
 
 class CommentModelFirebase {
     init(){
-        FIRApp.configure()
+        //FIRApp.configure()
     }
     
     func addComment(comment:Comment, completionBlock:@escaping (Error?)->Void){
