@@ -225,10 +225,11 @@
         <scene sceneID="1Ur-7Y-PNN">
             <objects>
                 <viewController title="Category View" id="zbP-dV-0nn" customClass="categoryView" customModule="ranked" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="409" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xbp-57-63a">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="409" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xbp-57-63a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.13725490200000001" green="0.20392156859999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postTableCell" rowHeight="480" id="lEW-T0-BDv" customClass="postTableViewCell" customModule="ranked" customModuleProvider="target">
@@ -556,16 +557,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21u-kU-DcL">
-                                <rect key="frame" x="96" y="183" width="222" height="274"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">This amazing project was done by:                              Omer Mintz                               Nir "Nissim" Sela                     Victor Zagumenniy</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="cis-5X-6on">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <subviews>
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rankedTeam" translatesAutoresizingMaskIntoConstraints="NO" id="Dhc-Gj-cgE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8f9-2m-tLe">
+                                        <rect key="frame" x="22.666666666666657" y="336" width="391.33333333333337" height="336"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This amazing project was done by:  Omer Mintz, Nir &quot;Nissim&quot; Sela, Victor Zagumenniy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21u-kU-DcL">
+                                                <rect key="frame" x="0.0" y="0.0" width="391.33333333333331" height="336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.51372549020000002" green="0.58039215690000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Dhc-Gj-cgE" firstAttribute="top" secondItem="cis-5X-6on" secondAttribute="top" id="LeK-q7-UWH"/>
+                                    <constraint firstItem="Dhc-Gj-cgE" firstAttribute="leading" secondItem="cis-5X-6on" secondAttribute="leading" id="ahg-Za-3Yz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dhc-Gj-cgE" secondAttribute="trailing" id="g6d-Zq-6SY"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.50413356859029423" green="0.39170130875045622" blue="0.62786251653439151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.094117647060000004" green="0.14901960780000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cis-5X-6on" firstAttribute="leading" secondItem="ZdH-Ly-FIp" secondAttribute="leading" id="Ubk-wc-47N"/>
+                            <constraint firstAttribute="trailing" secondItem="cis-5X-6on" secondAttribute="trailing" id="W4c-0z-crr"/>
+                            <constraint firstAttribute="bottom" secondItem="cis-5X-6on" secondAttribute="bottom" id="skh-5x-cyn"/>
+                            <constraint firstItem="cis-5X-6on" firstAttribute="top" secondItem="g5c-Ok-VCm" secondAttribute="bottom" id="xQW-fO-j5K"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Tgr-r8-Wl9"/>
                     <navigationItem key="navigationItem" title="About" id="Awk-CI-6AR"/>
@@ -700,6 +723,7 @@
         <image name="archive" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
         <image name="map" width="30" height="30"/>
+        <image name="rankedTeam" width="1280" height="720"/>
         <image name="vote" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
