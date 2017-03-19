@@ -11,6 +11,7 @@ import UIKit
 class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
     var activePost:Post?
+    var addcommentsController :addCommentViewController?
     
     @IBOutlet weak var postTitle: UILabel!
     
@@ -53,7 +54,14 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
         
         return cell
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "addCommentSegue"){
+            self.addcommentsController = (segue.destination as! addCommentViewController)
+            self.addcommentsController?.activePost = self.activePost
+        }
+    }
     @IBAction func openAddCommentView(_ sender: UIButton) {
+//        self.addcommentsController?.activePost = self.activePost
 //        self.addCommentView.isHidden = !self.addCommentView.isHidden
 //
 //        for constraint in self.addCommentView.constraints as [NSLayoutConstraint] {

@@ -397,7 +397,7 @@
                                 <rect key="frame" x="20" y="657" width="374" height="30"/>
                                 <state key="normal" title="Add Comment"/>
                                 <connections>
-                                    <segue destination="IFb-LG-ffm" kind="presentation" id="yuS-qP-WtI"/>
+                                    <segue destination="IFb-LG-ffm" kind="presentation" identifier="addCommentSegue" id="yuS-qP-WtI"/>
                                 </connections>
                             </button>
                         </subviews>

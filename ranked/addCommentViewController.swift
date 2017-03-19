@@ -12,6 +12,7 @@ class addCommentViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var authorNicknameField: UITextField!
     @IBOutlet weak var commentTextField: UITextView!
+    var activePost:Post?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,9 +37,7 @@ class addCommentViewController: UIViewController, UITextViewDelegate {
         let autherNick = self.authorNicknameField.text
         let commentText = self.commentTextField.text
         
-        // TODO: ??? change to postId
-        let com = Comment(postId: "???", author: autherNick!, text: commentText!, dateCreated: dateCreated, lastUpdate: date)
-        
+        let com = Comment(postId: (self.activePost?.id)!, author: autherNick!, text: commentText!, dateCreated: dateCreated, lastUpdate: date)
         // TODO: addComment
     }
     
