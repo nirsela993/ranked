@@ -462,7 +462,7 @@
             </objects>
             <point key="canvasLocation" x="-871.01449275362324" y="1914.9456521739132"/>
         </scene>
-        <!--Vote-->
+        <!--About-->
         <scene sceneID="DM3-Ny-IjD">
             <objects>
                 <viewController id="nWB-Zy-wtL" sceneMemberID="viewController">
@@ -473,14 +473,24 @@
                     <view key="view" contentMode="scaleToFill" id="ZdH-Ly-FIp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21u-kU-DcL">
+                                <rect key="frame" x="96" y="183" width="222" height="274"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">This amazing project was done by:                              Omer Mintz                               Nir "Nissim" Sela                     Victor Zagumenniy</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50413356859029423" green="0.39170130875045622" blue="0.62786251653439151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Tgr-r8-Wl9"/>
-                    <navigationItem key="navigationItem" title="Vote" id="Awk-CI-6AR"/>
+                    <navigationItem key="navigationItem" title="About" id="Awk-CI-6AR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjA-WQ-qjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="1096"/>
+            <point key="canvasLocation" x="373.91304347826087" y="1095.6521739130435"/>
         </scene>
         <!--Map-->
         <scene sceneID="IVk-vR-wec">
@@ -550,11 +560,11 @@
             </objects>
             <point key="canvasLocation" x="-2490" y="243"/>
         </scene>
-        <!--Vote-->
+        <!--About-->
         <scene sceneID="ATi-FV-DFK">
             <objects>
                 <navigationController id="pro-BG-Nit" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Vote" image="vote" selectedImage="vote" id="5hu-y6-BDV"/>
+                    <tabBarItem key="tabBarItem" title="About" image="vote" selectedImage="vote" id="5hu-y6-BDV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="2st-iJ-XJr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
