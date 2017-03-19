@@ -67,6 +67,15 @@ class PostModel{
         let filename = getDocumentsDirectory().appendingPathComponent(name)
         return UIImage(contentsOfFile:filename.path)
     }
+    
+    private func removeImageFromFile(name:String) {
+        let filePath = getDocumentsDirectory().appendingPathComponent(name)
+        do {
+            try FileManager.default.removeItem(at: filePath)
+        } catch let error as NSError {
+            print(error.debugDescription)
+        }}
+    
     func saveImage(image:UIImage, name:String, callback:@escaping (String?)->Void){
         //1. save image to Firebase
         modelFirebase?.saveImageToFirebase(image: image, name: name, callback: {(url) in
