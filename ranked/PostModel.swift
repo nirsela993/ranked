@@ -43,6 +43,7 @@ class PostModel{
     static let instance = PostModel()
     static let categoriesNames = ["funny","food","cute","science","gross","sports","ios","FAIL"]
     static let categoriesImages = [#imageLiteral(resourceName: "Funny"),#imageLiteral(resourceName: "food"),#imageLiteral(resourceName: "cute"),#imageLiteral(resourceName: "science"),#imageLiteral(resourceName: "gross") ,#imageLiteral(resourceName: "sports"),#imageLiteral(resourceName: "iphone"),#imageLiteral(resourceName: "wtf")]
+    private var timer = Timer()
 
     
     lazy private var modelSql:ModelSql? = ModelSql()
@@ -66,6 +67,25 @@ class PostModel{
     private func getImageFromFile(name:String)->UIImage?{
         let filename = getDocumentsDirectory().appendingPathComponent(name)
         return UIImage(contentsOfFile:filename.path)
+    }
+    
+    func sortPosts(this:Post, that:Post) -> Bool{
+        if this.lastUpdate != nil && that.lastUpdate != nil{
+            return this.lastUpdate! > that.lastUpdate!
+        }
+        return false
+    }
+    
+    func startTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 60*10, target: self, selector: #selector(self.removeOldImageFiles), userInfo: nil, repeats: true)
+    }
+    
+    @objc func removeOldImageFiles(){
+        var totalPostList = Post.getAllPostsFromLocalDb(database: self.modelSql?.database)
+        totalPostList = totalPostList.sorted(by: sortPosts)
+        for index in 5...totalPostList.count-1 {
+            removeImageFromFile(name: totalPostList[index].picture)
+        }
     }
     
     private func removeImageFromFile(name:String) {

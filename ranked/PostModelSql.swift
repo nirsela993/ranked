@@ -106,13 +106,11 @@ extension Post{
                 let longitude = Double(sqlite3_column_double(sqlite3_stmt,7))
                 let uploadDate = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,8))
                 let title = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,9))
-                
-                
-                // LOAD COMMENTS THIS CODE IS INCORRECT
+                let lastUpdate = Double(sqlite3_column_double(sqlite3_stmt,10))
                 
                 let post = Post(id: postId!,category:category!, authorNickname: authorNickname!,
                                 picture: picture!, title:title!, uploadDate:uploadDate!, likes:likes,
-                                dislikes:dislikes, latitude:latitude, longitude:longitude,comments:Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
+                                dislikes:dislikes, latitude:latitude, longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate) ,comments:Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
                 posts.append(post)
             }
         }
@@ -139,13 +137,11 @@ extension Post{
                 let longitude = Double(sqlite3_column_double(sqlite3_stmt,7))
                 let uploadDate = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,8))
                 let title = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,9))
-                
-                
-                // LOAD COMMENTS THIS CODE IS INCORRECT
+                let lastUpdate = Double(sqlite3_column_double(sqlite3_stmt,10))
                 
                 let post = Post(id: postId!,category:categoryName, authorNickname: authorNickname!,
                                 picture: picture!, title:title!, uploadDate:uploadDate!, likes:likes,
-                                dislikes:dislikes, latitude:latitude, longitude:longitude,comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
+                                dislikes:dislikes, latitude:latitude, longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate) ,comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
                 
                 posts.append(post)
             }

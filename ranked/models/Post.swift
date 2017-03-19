@@ -24,7 +24,7 @@ class Post {
     var lastUpdate:Date?
     var comments:[Comment]
     
-    init(id:String,category:String, authorNickname:String, picture:String, title:String, uploadDate:String, likes:Int, dislikes:Int, latitude:Double, longitude:Double,comments:[Comment]) {
+    init(id:String,category:String, authorNickname:String, picture:String, title:String, uploadDate:String, likes:Int, dislikes:Int, latitude:Double, longitude:Double,lastUpdate:Date?,comments:[Comment]) {
         self.id = id
         self.authorNickname = authorNickname
         self.picture = picture
@@ -35,6 +35,7 @@ class Post {
         self.latitude = latitude
         self.longitude = longitude
         self.category = category
+        self.lastUpdate = lastUpdate
         self.comments = comments
     }
     
