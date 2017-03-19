@@ -18,6 +18,19 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     var commentsController :commentsViewController?
     var refresher: UIRefreshControl!
     
+    @IBAction func sharePressed(_ sender: Any) {
+        let textToShare = "Look at this AMAZING Picture I found !!"
+        
+        if let myWebsite = NSURL(string: "http://www.rankednet.com/") {
+            let objectsToShare = [textToShare, myWebsite] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
+            
+            activityVC.popoverPresentationController?.sourceView = self.view
+            present(activityVC, animated: true, completion: nil)
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -63,7 +76,7 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
                 self.postsTableView.reloadData()
             })
         }
-
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,9 +95,9 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "postTableCell", for: indexPath)
         
         if let postCell = cell as? postTableViewCell {
-//            print("loading ----- ")
-//            print(self.posts?[indexPath.row].title,indexPath.row)
-//            
+            //            print("loading ----- ")
+            //            print(self.posts?[indexPath.row].title,indexPath.row)
+            //
             if(postCell.activePost == nil || postCell.activePost?.id != self.posts?[indexPath.row].id ){
                 postCell.loadPost(postToLoad: (self.posts?[indexPath.row])!,cellIndex: indexPath.row,callback: { })
             }
