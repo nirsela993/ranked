@@ -241,7 +241,7 @@
                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wgR-aU-Qcr">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wgR-aU-Qcr">
                                             <rect key="frame" x="8" y="28.333333333333343" width="398" height="405.66666666666663"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SM9-8s-8RQ">
@@ -278,6 +278,7 @@
                                         <constraint firstItem="wgR-aU-Qcr" firstAttribute="leading" secondItem="tNZ-ja-65s" secondAttribute="leadingMargin" id="8Dk-mK-um7"/>
                                         <constraint firstItem="KsX-Xn-Gza" firstAttribute="leading" secondItem="tNZ-ja-65s" secondAttribute="leadingMargin" id="HYB-Gz-Vv2"/>
                                         <constraint firstItem="KsX-Xn-Gza" firstAttribute="top" secondItem="tNZ-ja-65s" secondAttribute="topMargin" id="c0x-RZ-xwE"/>
+                                        <constraint firstItem="wgR-aU-Qcr" firstAttribute="centerX" secondItem="tNZ-ja-65s" secondAttribute="centerX" id="gUb-qQ-ke7"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="KsX-Xn-Gza" secondAttribute="trailing" id="jZ4-KT-UwL"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="SM9-8s-8RQ" secondAttribute="trailing" id="k5C-s1-pvW"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="wgR-aU-Qcr" secondAttribute="trailing" id="ncG-pX-oAW"/>
