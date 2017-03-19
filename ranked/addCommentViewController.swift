@@ -38,7 +38,7 @@ class addCommentViewController: UIViewController, UITextViewDelegate {
         let commentText = self.commentTextField.text
         
         let com = Comment(postId: (self.activePost?.id)!, author: autherNick!, text: commentText!, dateCreated: dateCreated, lastUpdate: date)
-        // TODO: addComment
+        CommentModel.instance.addComment(comment: com)
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {

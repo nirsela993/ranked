@@ -15,7 +15,7 @@ class CommentModelFirebase {
     }
     
     func addComment(comment:Comment, completionBlock:@escaping (Error?)->Void){
-        let ref = FIRDatabase.database().reference().child("posts").child(comment.postId).child("comments")
+        let ref = FIRDatabase.database().reference().child("posts").child(comment.postId).child("comments").childByAutoId()
         ref.setValue(comment.toFirebase()){(error, dbref) in
             completionBlock(error)
         }
