@@ -21,7 +21,7 @@ class CommentModel{
     
     func addComment(comment:Comment){
         modelFirebase?.addComment(comment: comment){(error) in
-            //st.addPostToLocalDb(database: self.modelSql?.database)
+            //comment.addPostToLocalDb(database: self.modelSql?.database)
         }
     }
     
