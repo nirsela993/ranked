@@ -133,7 +133,7 @@ class PostModel{
     
     func getPostById(postId: String)->Post {
         let postById = Post.getPostById(postId: postId, database: self.modelSql?.database)
-        return postById
+        return postById!
     }
     
     func getPostsByCategory(categoryName:String, callback:@escaping ([Post])->Void){

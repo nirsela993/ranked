@@ -28,6 +28,9 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
     }
     func loadPostToView(){
         self.postTitle.text = self.activePost?.title ?? "title"
+        CommentModel.instance.getCommentsByPostId(postId: (self.activePost?.id)!, callback: {(comments) in
+            self.activePost?.comments = comments
+        })
         
     }
     override func didReceiveMemoryWarning() {
@@ -61,21 +64,6 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
         }
     }
     @IBAction func openAddCommentView(_ sender: UIButton) {
-//        self.addcommentsController?.activePost = self.activePost
-//        self.addCommentView.isHidden = !self.addCommentView.isHidden
-//
-//        for constraint in self.addCommentView.constraints as [NSLayoutConstraint] {
-//            print("------testing constraints--------")
-//            print("constraint",constraint.identifier ?? "got NIL")
-//            if(constraint.identifier == "newCommentHeight"){
-//                print("got constraint")
-//                if(self.addCommentView.isHidden){
-//                    constraint.constant = 0
-//                } else{
-//                    constraint.constant = 220
-//                }
-//            }
-//        }
-//        self.view.layoutIfNeeded()
+        
     }
 }
