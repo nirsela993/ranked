@@ -128,7 +128,7 @@
             <objects>
                 <navigationController title="Categories" id="8Ap-T1-xq9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Categories" image="archive" selectedImage="archive" id="LYZ-Ay-9oW"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="A68-5o-T8r">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="A68-5o-T8r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.1137254902" green="0.64313725489999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -236,7 +236,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="480"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lEW-T0-BDv" id="tNZ-ja-65s">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsX-Xn-Gza">
@@ -375,7 +375,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cGM-ju-AIK" id="oRE-r5-4QZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZs-dD-nGS">
@@ -437,7 +437,7 @@
                                 <rect key="frame" x="20" y="657" width="374" height="30"/>
                                 <state key="normal" title="Add Comment"/>
                                 <connections>
-                                    <segue destination="IFb-LG-ffm" kind="presentation" identifier="addCommentSegue" id="yuS-qP-WtI"/>
+                                    <segue destination="IFb-LG-ffm" kind="presentation" identifier="addCommentSegue" id="HLM-GH-xm8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -456,6 +456,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="commentsTableView" destination="HAQ-6I-PHR" id="xIg-MB-wYa"/>
                         <outlet property="postTitle" destination="fzy-yd-qPX" id="9L7-NR-ga0"/>
                     </connections>
                 </viewController>
@@ -602,7 +603,7 @@
             <objects>
                 <navigationController id="oZB-Vq-61d" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="map" selectedImage="map" id="Qk4-Eu-Kar"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="jcQ-Zm-QSt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="jcQ-Zm-QSt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.1137254902" green="0.64313725489999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -657,7 +658,7 @@
             <objects>
                 <navigationController id="tWi-Ae-abL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home" id="XL6-8J-cEi"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="xp7-G6-nLT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="xp7-G6-nLT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.1137254902" green="0.64313725489999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -679,7 +680,7 @@
             <objects>
                 <navigationController id="pro-BG-Nit" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About" image="vote" selectedImage="vote" id="5hu-y6-BDV"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="2st-iJ-XJr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="2st-iJ-XJr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.1137254902" green="0.64313725489999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>

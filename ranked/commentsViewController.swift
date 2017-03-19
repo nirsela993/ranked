@@ -12,19 +12,28 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
     
     var activePost:Post?
     var addcommentsController :addCommentViewController?
-    
+    var refresher: UIRefreshControl!
+
+    @IBOutlet weak var commentsTableView: UITableView!
     @IBOutlet weak var postTitle: UILabel!
     
-    @IBOutlet weak var commentText: UITextView!
-    @IBOutlet weak var usernameText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(commentsViewController.refreshTable), for: UIControlEvents.valueChanged)
+        commentsTableView.addSubview(refresher)
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadPostToView()
         
+    }
+    func refreshTable(){
+        self.loadPostToView()
+        self.commentsTableView.reloadData()
+        refresher.endRefreshing()
     }
     func loadPostToView(){
         self.postTitle.text = self.activePost?.title ?? "title"
@@ -62,8 +71,5 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
             self.addcommentsController = (segue.destination as! addCommentViewController)
             self.addcommentsController?.activePost = self.activePost
         }
-    }
-    @IBAction func openAddCommentView(_ sender: UIButton) {
-        
     }
 }

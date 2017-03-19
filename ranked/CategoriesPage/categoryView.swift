@@ -16,11 +16,16 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     var posts:[Post]?
     var activePost:Post?
     var commentsController :commentsViewController?
+    var refresher: UIRefreshControl!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(categoryView.refreshTable), for: UIControlEvents.valueChanged)
+        postsTableView.addSubview(refresher)
+        
         if (self.categoryName != nil){
             self.navigationTitle.title = self.categoryName
             
@@ -38,6 +43,11 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
      }
      */
     
+    func refreshTable(){
+        self.loadPosts(categoyName: self.categoryName!)
+        refresher.endRefreshing()
+    }
+    
     func loadPosts(categoyName : String){
         print("loading posts for " + categoryName!)
         if(self.categoryName == "home"){
@@ -53,6 +63,7 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
                 self.postsTableView.reloadData()
             })
         }
+
     }
     
     override func didReceiveMemoryWarning() {

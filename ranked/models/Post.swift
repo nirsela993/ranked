@@ -46,9 +46,9 @@ class Post {
         category = json["category"] as! String
         comments = []
         if (json["comments"] != nil){
-            let commentArr = json["comments"] as! NSArray
+            let commentArr = json["comments"] as! NSDictionary
             for comment in commentArr {
-                comments.append(Comment(json: comment as! Dictionary<String, Any>))
+                comments.append(Comment(json: comment.value as! Dictionary<String, Any>))
             }
         }
         if let ts = json["lastUpdate"] as? Double{
