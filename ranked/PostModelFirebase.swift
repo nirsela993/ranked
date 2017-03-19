@@ -49,7 +49,6 @@ class PostModelFirebase {
     
     func addPost(post:Post, completionBlock:@escaping (Error?)->Void){
         let ref = FIRDatabase.database().reference().child("posts").child(post.id)
-        //ref.setValue(post.toFirebase())
         ref.setValue(post.toFirebase()){(error, dbref) in
             completionBlock(error)
         }

@@ -1,9 +1,9 @@
 //
-//  Model.swift
-//  TestFb
+//  PostModel.swift
+//  ranked
 //
-//  Created by Eliav Menachi on 14/12/2016.
-//  Copyright © 2016 menachi. All rights reserved.
+//  Created by Nir Sela on 19/03/2017.
+//  Copyright © 2017 Nir Sela. All rights reserved.
 //
 
 import Foundation

@@ -1,9 +1,9 @@
 //
-//  Student+sql.swift
-//  TestFb
+//  PostModelSql.swift
+//  ranked
 //
-//  Created by Eliav Menachi on 21/12/2016.
-//  Copyright © 2016 menachi. All rights reserved.
+//  Created by Nir Sela on 07/03/2017.
+//  Copyright © 2017 Nir Sela. All rights reserved.
 //
 
 import Foundation
@@ -99,7 +99,9 @@ extension Post{
                 let lastUpdate = Double(sqlite3_column_double(sqlite3_stmt,8))
                 
                 let post = Post(id: postId!,category:category!, authorNickname: authorNickname!,
-                                picture: picture!, title:title!, uploadDate:uploadDate!, latitude:latitude, longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate) ,comments:Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
+                                picture: picture!, title:title!, uploadDate:uploadDate!, latitude:latitude,
+                                longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate),
+                                comments:Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
                 posts.append(post)
             }
         }
@@ -127,7 +129,9 @@ extension Post{
                 let lastUpdate = Double(sqlite3_column_double(sqlite3_stmt,8))
                 
                 let post = Post(id: postId!,category:categoryName, authorNickname: authorNickname!,
-                                picture: picture!, title:title!, uploadDate:uploadDate!, latitude:latitude, longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate) ,comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
+                                picture: picture!, title:title!, uploadDate:uploadDate!, latitude:latitude,
+                                longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate),
+                                comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
                 
                 posts.append(post)
             }
@@ -157,7 +161,9 @@ extension Post{
                 
                 
                 post = Post(id: postId,category:category!, authorNickname: authorNickname!,
-                                picture: picture!, title:title!, uploadDate:uploadDate!, latitude:latitude, longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate),comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId ,database: database))
+                                picture: picture!, title:title!, uploadDate:uploadDate!, latitude:latitude,
+                                longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate),
+                                comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId ,database: database))
             }
         }
         sqlite3_finalize(sqlite3_stmt)
