@@ -17,21 +17,17 @@ class Post {
     var title:String
     var category:String
     var uploadDate:String
-    var likes:Int
-    var dislikes:Int
     var latitude:Double
     var longitude:Double
     var lastUpdate:Date?
     var comments:[Comment]
     
-    init(id:String,category:String, authorNickname:String, picture:String, title:String, uploadDate:String, likes:Int, dislikes:Int, latitude:Double, longitude:Double,lastUpdate:Date?,comments:[Comment]) {
+    init(id:String,category:String, authorNickname:String, picture:String, title:String, uploadDate:String, latitude:Double, longitude:Double,lastUpdate:Date?,comments:[Comment]) {
         self.id = id
         self.authorNickname = authorNickname
         self.picture = picture
         self.title = title
         self.uploadDate = uploadDate
-        self.likes = likes
-        self.dislikes = dislikes
         self.latitude = latitude
         self.longitude = longitude
         self.category = category
@@ -45,8 +41,6 @@ class Post {
         picture = json["picture"] as! String
         title = json["title"] as! String
         uploadDate = json["uploadDate"] as! String
-        likes = json["likes"] as! Int
-        dislikes = json["dislikes"] as! Int
         latitude = json["latitude"] as! Double
         longitude = json["longitude"] as! Double
         category = json["category"] as! String
@@ -69,8 +63,6 @@ class Post {
         json["picture"] = picture
         json["title"] = title
         json["uploadDate"] = uploadDate
-        json["likes"] = likes
-        json["dislikes"] = dislikes
         json["latitude"] = latitude
         json["longitude"] = longitude
         json["category"] = category

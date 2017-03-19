@@ -107,10 +107,8 @@ class NewItemViewController: UIViewController, UIImagePickerControllerDelegate, 
             
             let autherNick = self.FieldAuthor.text
             let titel = self.FieldTitle.text
-                        let likes = 0
-            let dislikes = 0
             let id = autherNick! + uploadDate
-            let newPost = Post(id: id, category: self.selectedCategory, authorNickname: autherNick!, picture: picture!, title: titel!, uploadDate: uploadDate, likes: likes, dislikes: dislikes, latitude: self.UserLatitude, longitude: self.UserLongitude, lastUpdate:date, comments: [])
+            let newPost = Post(id: id, category: self.selectedCategory, authorNickname: autherNick!, picture: picture!, title: titel!, uploadDate: uploadDate, latitude: self.UserLatitude, longitude: self.UserLongitude, lastUpdate:date, comments: [])
             
             PostModel.instance.addPost(post: newPost)
 

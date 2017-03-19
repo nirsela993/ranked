@@ -16,8 +16,6 @@ extension Post{
     static let AUTHOR_NICKNAME = "AUTHOR_NICKNAME"
     static let PICTURE = "PICTURE"
     static let CATEGORY = "CATEGORY"
-    static let LIKES = "LIKES"
-    static let DISLIKES = "DISLIKES"
     static let LATITUDE = "LATITUDE"
     static let LONGITUDE = "LONGITUDE"
     static let UPLOAD_DATE = "UPLOAD_DATE"
@@ -32,8 +30,6 @@ extension Post{
             + AUTHOR_NICKNAME + " TEXT, "
             + PICTURE + " TEXT, "
             + CATEGORY + " TEXT, "
-            + LIKES + " NUMERIC, "
-            + DISLIKES + " NUMERIC, "
             + LATITUDE + " DOUBLE, "
             + LONGITUDE + " DOUBLE, "
             + UPLOAD_DATE + " TEXT, "
@@ -54,13 +50,11 @@ extension Post{
             + Post.AUTHOR_NICKNAME + ","
             + Post.PICTURE + ","
             + Post.CATEGORY + ","
-            + Post.LIKES + ","
-            + Post.DISLIKES + ","
             + Post.LATITUDE + ","
             + Post.LONGITUDE + ","
             + Post.UPLOAD_DATE + ","
             + Post.TITLE + ","
-            + Post.LAST_UPDATE + ") VALUES (?,?,?,?,?,?,?,?,?,?,?);",-1, &sqlite3_stmt,nil) == SQLITE_OK){
+            + Post.LAST_UPDATE + ") VALUES (?,?,?,?,?,?,?,?,?);",-1, &sqlite3_stmt,nil) == SQLITE_OK){
             
             let id = self.id.cString(using: .utf8)
             let authorNickname = self.authorNickname.cString(using: .utf8)
@@ -73,12 +67,10 @@ extension Post{
             sqlite3_bind_text(sqlite3_stmt, 2, authorNickname,-1,nil);
             sqlite3_bind_text(sqlite3_stmt, 3, picture,-1,nil);
             sqlite3_bind_text(sqlite3_stmt, 4, category, -1, nil);
-            sqlite3_bind_int(sqlite3_stmt, 5, Int32(self.likes));
-            sqlite3_bind_int(sqlite3_stmt, 6, Int32(self.dislikes));
-            sqlite3_bind_double(sqlite3_stmt, 7, self.latitude);
-            sqlite3_bind_double(sqlite3_stmt, 8, self.longitude);
-            sqlite3_bind_text(sqlite3_stmt, 9, uploadDate, -1, nil);
-            sqlite3_bind_text(sqlite3_stmt, 10, titel, -1, nil)
+            sqlite3_bind_double(sqlite3_stmt, 5, self.latitude);
+            sqlite3_bind_double(sqlite3_stmt, 6, self.longitude);
+            sqlite3_bind_text(sqlite3_stmt, 7, uploadDate, -1, nil);
+            sqlite3_bind_text(sqlite3_stmt, 8, titel, -1, nil)
             if (lastUpdate == nil){
                 lastUpdate = Date()
             }
@@ -100,17 +92,14 @@ extension Post{
                 let authorNickname = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,1))
                 let picture = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,2))
                 let category = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,3))
-                let likes = Int(sqlite3_column_int(sqlite3_stmt,4))
-                let dislikes = Int(sqlite3_column_int(sqlite3_stmt,5))
-                let latitude = Double(sqlite3_column_double(sqlite3_stmt,6))
-                let longitude = Double(sqlite3_column_double(sqlite3_stmt,7))
-                let uploadDate = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,8))
-                let title = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,9))
-                let lastUpdate = Double(sqlite3_column_double(sqlite3_stmt,10))
+                let latitude = Double(sqlite3_column_double(sqlite3_stmt,4))
+                let longitude = Double(sqlite3_column_double(sqlite3_stmt,5))
+                let uploadDate = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,6))
+                let title = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,7))
+                let lastUpdate = Double(sqlite3_column_double(sqlite3_stmt,8))
                 
                 let post = Post(id: postId!,category:category!, authorNickname: authorNickname!,
-                                picture: picture!, title:title!, uploadDate:uploadDate!, likes:likes,
-                                dislikes:dislikes, latitude:latitude, longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate) ,comments:Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
+                                picture: picture!, title:title!, uploadDate:uploadDate!, latitude:latitude, longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate) ,comments:Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
                 posts.append(post)
             }
         }
@@ -131,17 +120,14 @@ extension Post{
                 let postId = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,0))
                 let authorNickname = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,1))
                 let picture = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,2))
-                let likes = Int(sqlite3_column_int(sqlite3_stmt,4))
-                let dislikes = Int(sqlite3_column_int(sqlite3_stmt,5))
-                let latitude = Double(sqlite3_column_double(sqlite3_stmt,6))
-                let longitude = Double(sqlite3_column_double(sqlite3_stmt,7))
-                let uploadDate = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,8))
-                let title = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,9))
-                let lastUpdate = Double(sqlite3_column_double(sqlite3_stmt,10))
+                let latitude = Double(sqlite3_column_double(sqlite3_stmt,4))
+                let longitude = Double(sqlite3_column_double(sqlite3_stmt,5))
+                let uploadDate = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,6))
+                let title = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,7))
+                let lastUpdate = Double(sqlite3_column_double(sqlite3_stmt,8))
                 
                 let post = Post(id: postId!,category:categoryName, authorNickname: authorNickname!,
-                                picture: picture!, title:title!, uploadDate:uploadDate!, likes:likes,
-                                dislikes:dislikes, latitude:latitude, longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate) ,comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
+                                picture: picture!, title:title!, uploadDate:uploadDate!, latitude:latitude, longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate) ,comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
                 
                 posts.append(post)
             }
@@ -162,19 +148,16 @@ extension Post{
                 let authorNickname = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,1))
                 let picture = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,2))
                 let category = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,3))
-                let likes = Int(sqlite3_column_int(sqlite3_stmt,4))
-                let dislikes = Int(sqlite3_column_int(sqlite3_stmt,5))
-                let latitude = Double(sqlite3_column_double(sqlite3_stmt,6))
-                let longitude = Double(sqlite3_column_double(sqlite3_stmt,7))
-                let uploadDate = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,8))
-                let title = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,9))
-                let lastUpdate = Double(sqlite3_column_double(sqlite3_stmt,10))
+                let latitude = Double(sqlite3_column_double(sqlite3_stmt,4))
+                let longitude = Double(sqlite3_column_double(sqlite3_stmt,5))
+                let uploadDate = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,6))
+                let title = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,7))
+                let lastUpdate = Double(sqlite3_column_double(sqlite3_stmt,8))
                 
                 
                 
                 post = Post(id: postId,category:category!, authorNickname: authorNickname!,
-                                picture: picture!, title:title!, uploadDate:uploadDate!, likes:likes,
-                                dislikes:dislikes, latitude:latitude, longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate),comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId ,database: database))
+                                picture: picture!, title:title!, uploadDate:uploadDate!, latitude:latitude, longitude:longitude, lastUpdate:Date.fromFirebase(lastUpdate),comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId ,database: database))
             }
         }
         sqlite3_finalize(sqlite3_stmt)
