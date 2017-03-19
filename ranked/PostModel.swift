@@ -131,6 +131,11 @@ class PostModel{
         }
     }
     
+    func getPostById(postId: String)->Post {
+        let postById = Post.getPostById(postId: postId, database: self.modelSql?.database)
+        return postById
+    }
+    
     func getPostsByCategory(categoryName:String, callback:@escaping ([Post])->Void){
         let postsByCategory = Post.getAllPostsByCategoryFromLocalDb(categoryName: categoryName, database: self.modelSql?.database)
         callback(postsByCategory)
@@ -145,17 +150,17 @@ class PostModel{
             //update the local db
             print("got \(posts.count) new records from FB")
             var lastUpdate:Date?
-            for st in posts{
-                st.addPostToLocalDb(database: self.modelSql?.database)
+            for post in posts{
+                post.addPostToLocalDb(database: self.modelSql?.database)
                 //just s check
-                if st.comments.count > 0{
-                    st.comments[0].addCommentToLocalDb(database: self.modelSql?.database);
+                for comment in post.comments {
+                    comment.addCommentToLocalDb(database: self.modelSql?.database);
                 }
                 if lastUpdate == nil{
-                    lastUpdate = st.lastUpdate
+                    lastUpdate = post.lastUpdate
                 }else{
-                    if lastUpdate!.compare(st.lastUpdate!) == ComparisonResult.orderedAscending{
-                        lastUpdate = st.lastUpdate
+                    if lastUpdate!.compare(post.lastUpdate!) == ComparisonResult.orderedAscending{
+                        lastUpdate = post.lastUpdate
                     }
                 }
             }

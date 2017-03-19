@@ -43,5 +43,4 @@ class Comment {
         json["lastUpdate"] = FIRServerValue.timestamp()
         return json
     }
-    
 }

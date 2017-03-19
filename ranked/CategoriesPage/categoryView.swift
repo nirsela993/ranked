@@ -87,6 +87,7 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("sending comments to comment view with #comments ->>")
         print(self.posts?[indexPath.row].comments.count ?? "no comments?")
+        CommentModel.instance.getCommentsByPostId(postId: (self.posts?[indexPath.row].id)!, callback: ([Comment]) -> Void)
         self.commentsController?.activePost = self.posts?[indexPath.row]
         
     }

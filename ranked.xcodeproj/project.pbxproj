@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1708C6431E75AF1300F0CF42 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708C6421E75AF1300F0CF42 /* NewItemViewController.swift */; };
 		171091AD1E7D39F40010F79C /* CommentModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171091AC1E7D39F40010F79C /* CommentModelSql.swift */; };
+		1735A1161E7E82BC00DCC4D0 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1735A1151E7E82BC00DCC4D0 /* CommentModel.swift */; };
 		17665D7B1E7987A600D0DB48 /* PostModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17665D7A1E7987A600D0DB48 /* PostModelFirebase.swift */; };
 		17665D7F1E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */; };
 		177EDA671E7C02A1003686E5 /* PostModelSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EDA661E7C02A1003686E5 /* PostModelSql.swift */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		1708C6421E75AF1300F0CF42 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = NewItemViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		171091AC1E7D39F40010F79C /* CommentModelSql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModelSql.swift; sourceTree = "<group>"; };
+		1735A1151E7E82BC00DCC4D0 /* CommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		17665D7A1E7987A600D0DB48 /* PostModelFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModelFirebase.swift; sourceTree = "<group>"; };
 		17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModelFirebase.swift; sourceTree = "<group>"; };
 		177EDA661E7C02A1003686E5 /* PostModelSql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PostModelSql.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -172,6 +174,7 @@
 				17665D7E1E7987C700D0DB48 /* CommentModelFirebase.swift */,
 				59DE6C3D1E7AFE3000FE0FC7 /* Comment.swift */,
 				171091AC1E7D39F40010F79C /* CommentModelSql.swift */,
+				1735A1151E7E82BC00DCC4D0 /* CommentModel.swift */,
 			);
 			name = comment;
 			sourceTree = "<group>";
@@ -180,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				59AFE0831E73F5B5001D51F7 /* .gitignore */,
-				17F4E5E51E7200FD0085960F /* ranked */,
+				17F4E5E51E7200FD0085960F /* Ï */,
 				17F4E5FA1E7200FD0085960F /* rankedTests */,
 				17F4E6051E7200FD0085960F /* rankedUITests */,
 				17F4E5E41E7200FD0085960F /* Products */,
@@ -199,7 +202,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		17F4E5E51E7200FD0085960F /* ranked */ = {
+		17F4E5E51E7200FD0085960F /* Ï */ = {
 			isa = PBXGroup;
 			children = (
 				590AC83F1E794947008EDBBC /* postListView */,
@@ -216,6 +219,7 @@
 				17F4E61F1E7225C50085960F /* MapViewController.swift */,
 				1708C6421E75AF1300F0CF42 /* NewItemViewController.swift */,
 			);
+			name = "Ï";
 			path = ranked;
 			sourceTree = "<group>";
 		};
@@ -570,6 +574,7 @@
 				59DE6C321E79EB3600FE0FC7 /* postTableViewCell.swift in Sources */,
 				178FBADB1E7BF31F000E0E40 /* PostModel.swift in Sources */,
 				17665D7F1E7987C700D0DB48 /* CommentModelFirebase.swift in Sources */,
+				1735A1161E7E82BC00DCC4D0 /* CommentModel.swift in Sources */,
 				171091AD1E7D39F40010F79C /* CommentModelSql.swift in Sources */,
 				590AC8411E79496D008EDBBC /* postListVIewController.swift in Sources */,
 				59DE6C421E7C223500FE0FC7 /* commentTableViewCell.swift in Sources */,

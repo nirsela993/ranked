@@ -33,6 +33,7 @@ class PostModelFirebase {
             }
         }
     }
+    
     func getImageFromFirebase(url:String, callback:@escaping (UIImage?)->Void){
         let ref = FIRStorage.storage().reference(forURL: url)
         ref.data(withMaxSize: 100000000, completion: {(data, error) in
@@ -45,9 +46,6 @@ class PostModelFirebase {
             }
         })
     }
-
-    
-    
     
     func addPost(post:Post, completionBlock:@escaping (Error?)->Void){
         let ref = FIRDatabase.database().reference().child("posts").child(post.id)

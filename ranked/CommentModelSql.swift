@@ -55,10 +55,11 @@ extension Comment{
             sqlite3_bind_text(sqlite3_stmt, 3, commentText,-1,nil);
             sqlite3_bind_text(sqlite3_stmt, 4, author, -1, nil);
             sqlite3_bind_text(sqlite3_stmt, 5, dateCreated, -1, nil);
-
+            
             if (self.lastUpdate == nil){
                 self.lastUpdate = Date()
             }
+            
             sqlite3_bind_double(sqlite3_stmt, 6, self.lastUpdate!.toFirebase());
             
             if(sqlite3_step(sqlite3_stmt) == SQLITE_DONE){

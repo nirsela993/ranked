@@ -150,4 +150,33 @@ extension Post{
         return posts
     }
     
+    static func getPostById(postId:String ,database:OpaquePointer?)->Post{
+        var post : Post
+        var sqlite3_stmt: OpaquePointer? = nil
+        if (sqlite3_prepare_v2(database,"SELECT * from " + TABLE + " WHERE " + ID + " = ?;",-1,&sqlite3_stmt,nil) == SQLITE_OK){
+            let postId = postId.cString(using: .utf8)
+            sqlite3_bind_text(sqlite3_stmt, 1, postId,-1,nil);
+            
+            if (sqlite3_step(sqlite3_stmt) == SQLITE_ROW) {
+                
+                let postId = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,0))
+                let authorNickname = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,1))
+                let picture = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,2))
+                let category = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,3))
+                let likes = Int(sqlite3_column_int(sqlite3_stmt,4))
+                let dislikes = Int(sqlite3_column_int(sqlite3_stmt,5))
+                let latitude = Double(sqlite3_column_double(sqlite3_stmt,6))
+                let longitude = Double(sqlite3_column_double(sqlite3_stmt,7))
+                let uploadDate = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,8))
+                let title = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,9))
+                
+                post = Post(id: postId!,category:category!, authorNickname: authorNickname!,
+                                picture: picture!, title:title!, uploadDate:uploadDate!, likes:likes,
+                                dislikes:dislikes, latitude:latitude, longitude:longitude,comments: Comment.getAllCommentsByPostIdFromLocalDb(recPostID: postId!, database: database))
+            }
+        }
+        sqlite3_finalize(sqlite3_stmt)
+        return post
+    }
+    
 }
