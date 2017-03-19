@@ -342,13 +342,13 @@
                                                     <rect key="frame" x="8" y="8" width="398" height="20"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKx-lV-UE6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="297" height="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="297.33333333333331" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="creation date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npj-re-ZpX">
-                                                            <rect key="frame" x="297" y="0.0" width="101" height="20"/>
+                                                            <rect key="frame" x="297.33333333333326" y="0.0" width="100.66666666666669" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -438,7 +438,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6U-xQ-BGy">
                                 <rect key="frame" x="72" y="232" width="270" height="272"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="opk-gN-04D">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your username/nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="opk-gN-04D">
                                         <rect key="frame" x="5" y="5" width="260" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -457,15 +457,20 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLB-a2-eBG">
                                                 <rect key="frame" x="135" y="0.0" width="135" height="30"/>
                                                 <state key="normal" title="Add Comment"/>
+                                                <connections>
+                                                    <action selector="addComment:" destination="IFb-LG-ffm" eventType="touchUpInside" id="ahr-i8-5TB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EZJ-iT-Yl4">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="add a public comment..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EZJ-iT-Yl4">
                                         <rect key="frame" x="5" y="45" width="260" height="182"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="IFb-LG-ffm" id="sz3-kc-Cz7"/>
+                                        </connections>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -491,6 +496,10 @@
                             <constraint firstItem="m6U-xQ-BGy" firstAttribute="centerX" secondItem="mNc-Lk-gav" secondAttribute="centerX" id="O0h-Pe-oyV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authorNicknameField" destination="opk-gN-04D" id="lBh-KG-1M1"/>
+                        <outlet property="commentTextField" destination="EZJ-iT-Yl4" id="dJn-e3-o73"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpl-BW-Of5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

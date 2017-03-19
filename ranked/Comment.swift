@@ -16,11 +16,12 @@ class Comment {
     var dateCreated:String
     var lastUpdate:Date?
     
-    init(postId:String,author:String,text:String,dateCreated:String){
+    init(postId:String,author:String,text:String,dateCreated:String,lastUpdate:Date){
         self.postId = postId
         self.text = text
         self.author = author
         self.dateCreated = dateCreated
+        self.lastUpdate = lastUpdate
     }
     
     init(json:Dictionary<String,Any>){

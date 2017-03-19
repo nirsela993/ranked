@@ -8,7 +8,7 @@
 
 import UIKit
 
-class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource, UITextViewDelegate{
+class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
     var activePost:Post?
     
@@ -19,7 +19,6 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        self.commentText.textColor = UIColor.lightGray
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,20 +33,6 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    
-//    func textViewDidEndEditing(_ textView: UITextView) {
-//        if textView.text.isEmpty {
-//            textView.text = "add a public comment..."
-//            textView.textColor = UIColor.lightGray
-//        }
-//    }
-//    func textViewDidBeginEditing(_ textView: UITextView) {
-//        if textView.textColor == UIColor.lightGray {
-//            textView.text = nil
-//            textView.textColor = UIColor.black
-//        }
-//    }
-//    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.activePost?.comments.count ?? 0
     }

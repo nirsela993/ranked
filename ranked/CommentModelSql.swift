@@ -80,8 +80,10 @@ extension Comment{
                 let commandText = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,2))
                 let commentAuthor = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,3))
                 let dateCreated = String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,4))
+                let lastUpdate = Double(sqlite3_column_double(sqlite3_stmt,5))
+
                 
-                let comment = Comment(postId: recPostID, author: commentAuthor!, text: commandText!, dateCreated: dateCreated!)
+                let comment = Comment(postId: recPostID, author: commentAuthor!, text: commandText!, dateCreated: dateCreated!, lastUpdate:Date.fromFirebase(lastUpdate))
                 comments.append(comment)
             }
         }

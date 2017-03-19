@@ -8,13 +8,16 @@
 
 import UIKit
 
-class addCommentViewController: UIViewController {
-
+class addCommentViewController: UIViewController, UITextViewDelegate {
+    
+    @IBOutlet weak var authorNicknameField: UITextField!
+    @IBOutlet weak var commentTextField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.commentTextField.textColor = UIColor.lightGray
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -23,5 +26,32 @@ class addCommentViewController: UIViewController {
     @IBAction func cancled(_ sender: Any) {
         self.dismiss(animated: true)
     }
-
+    @IBAction func addComment(_ sender: Any) {
+        let date = Date();
+        let dateFormatter = DateFormatter();
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss";
+        let dateCreated = dateFormatter.string(from: date)
+        
+        let autherNick = self.authorNicknameField.text
+        let commentText = self.commentTextField.text
+        
+        // TODO: ??? change to postId
+        let com = Comment(postId: "???", author: autherNick!, text: commentText!, dateCreated: dateCreated, lastUpdate: date)
+        
+        // TODO: addComment
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "add a public comment..."
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
 }
