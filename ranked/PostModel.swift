@@ -42,7 +42,7 @@ extension Date {
 class PostModel{
     static let instance = PostModel()
     static let categoriesNames = ["funny","food","cute","science","gross","sports","ios","FAIL"]
-    static let categoriesImages = [#imageLiteral(resourceName: "Funny"),#imageLiteral(resourceName: "food"),#imageLiteral(resourceName: "cute"),#imageLiteral(resourceName: "wtf"),#imageLiteral(resourceName: "Funny"), #imageLiteral(resourceName: "Funny"),#imageLiteral(resourceName: "Funny"),#imageLiteral(resourceName: "Funny")]
+    static let categoriesImages = [#imageLiteral(resourceName: "Funny"),#imageLiteral(resourceName: "food"),#imageLiteral(resourceName: "cute"),#imageLiteral(resourceName: "science"),#imageLiteral(resourceName: "gross") ,#imageLiteral(resourceName: "sports"),#imageLiteral(resourceName: "iphone"),#imageLiteral(resourceName: "wtf")]
 
     
     lazy private var modelSql:ModelSql? = ModelSql()
