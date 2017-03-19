@@ -22,15 +22,12 @@ class postTableViewCell: UITableViewCell {
     
     
     func loadPost(postToLoad:Post , callback:@escaping ()->Void){
-        //        postImage.image =
-        //            UIpostTitle.text = title
-        
+
         self.activePost = postToLoad
         self.UIpostTitle.text = self.activePost?.title
         self.postImage.image = #imageLiteral(resourceName: "Funny")
         PostModel.instance.getImage(urlStr: (self.activePost?.picture)!, callback: {(image) in
             self.postImage.image = image
-//            self.layoutSubviews()
             self.setNeedsLayout()
             self.layoutIfNeeded()
 //            callback()
@@ -41,7 +38,6 @@ class postTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
     }
     
 }
