@@ -127,7 +127,7 @@ class PostModel{
     
     func addPost(post:Post){
         modelFirebase?.addPost(post: post){(error) in
-            //st.addPostToLocalDb(database: self.modelSql?.database)
+            //post.addPostToLocalDb(database: self.modelSql?.database)
         }
     }
     
@@ -175,44 +175,6 @@ class PostModel{
             
             //return the list to the caller
             callback(totalList)
-        })
-    }
-    
-    func getAllPostsAndObserve(){
-        // get last update date from SQL
-        let lastUpdateDate = LastUpdateTable.getLastUpdateDate(database: modelSql?.database, table: Post.TABLE)
-        
-        // get all updated records from firebase
-        modelFirebase?.getAllPostsAndObserve(lastUpdateDate, callback: { (posts) in
-            //update the local db
-            print("got \(posts.count) new records from FB")
-            var lastUpdate:Date?
-            for post in posts{
-                post.addPostToLocalDb(database: self.modelSql?.database)
-                //just s check
-                if post.comments.count > 0{
-                    post.comments[0].addCommentToLocalDb(database: self.modelSql?.database);
-                }
-                if lastUpdate == nil{
-                    lastUpdate = post.lastUpdate
-                }else{
-                    if lastUpdate!.compare(post.lastUpdate!) == ComparisonResult.orderedAscending{
-                        lastUpdate = post.lastUpdate
-                    }
-                }
-            }
-            
-            //upadte the last update table
-            if (lastUpdate != nil){
-                LastUpdateTable.setLastUpdate(database: self.modelSql!.database, table: Post.TABLE, lastUpdate: lastUpdate!)
-            }
-            
-            //get the complete list from local DB
-            let totalList = Post.getAllPostsFromLocalDb(database: self.modelSql?.database)
-            
-            //return the list to the observers using notification center
-            NotificationCenter.default.post(name: Notification.Name(rawValue:
-                notifyPostListUpdate), object:nil , userInfo:["posts":totalList])
         })
     }
 }
