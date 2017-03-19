@@ -14,7 +14,7 @@
         <!--New Item-->
         <scene sceneID="Dds-ZU-pcS">
             <objects>
-                <viewController id="k7P-bH-wXS" customClass="NewItemViewController" customModule="ranked" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="k7P-bH-wXS" customClass="NewItemViewController" customModule="ranked" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5UN-v3-yrU"/>
                         <viewControllerLayoutGuide type="bottom" id="cFw-0v-WcQ"/>
@@ -299,7 +299,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="DPf-3V-acg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fc1-Vf-CYZ">
+                        <barButtonItem key="rightBarButtonItem" title="+ Add New Item" id="fc1-Vf-CYZ">
                             <connections>
                                 <segue destination="k7P-bH-wXS" kind="push" id="TaA-Mb-xx2"/>
                             </connections>
@@ -396,7 +396,7 @@
                                 <rect key="frame" x="20" y="657" width="374" height="30"/>
                                 <state key="normal" title="Add Comment"/>
                                 <connections>
-                                    <action selector="openAddCommentView:" destination="RM3-Uz-RPc" eventType="touchUpInside" id="6rz-KC-2tL"/>
+                                    <segue destination="IFb-LG-ffm" kind="presentation" id="yuS-qP-WtI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -422,15 +422,15 @@
             </objects>
             <point key="canvasLocation" x="-871.09375" y="1914.8437499999998"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Comment View Controller-->
         <scene sceneID="tNQ-8t-koE">
             <objects>
-                <viewController id="IFb-LG-ffm" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="IFb-LG-ffm" customClass="addCommentViewController" customModule="ranked" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H7y-vs-eDN"/>
                         <viewControllerLayoutGuide type="bottom" id="Pq9-sf-7km"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mNc-Lk-gav">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mNc-Lk-gav">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -449,6 +449,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="um2-iU-DhT">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
                                                 <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancled:" destination="IFb-LG-ffm" eventType="touchUpInside" id="TNO-1v-4nH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLB-a2-eBG">
                                                 <rect key="frame" x="135" y="0.0" width="135" height="30"/>
@@ -481,7 +484,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="m6U-xQ-BGy" firstAttribute="centerY" secondItem="mNc-Lk-gav" secondAttribute="centerY" id="NFn-ed-VEt"/>
                             <constraint firstItem="m6U-xQ-BGy" firstAttribute="centerX" secondItem="mNc-Lk-gav" secondAttribute="centerX" id="O0h-Pe-oyV"/>
