@@ -14,6 +14,8 @@ class postTableViewCell: UITableViewCell {
     
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var UIpostTitle: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var postDateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +27,8 @@ class postTableViewCell: UITableViewCell {
 
         self.activePost = postToLoad
         self.UIpostTitle.text = self.activePost?.title
+        self.postDateLabel.text = self.activePost?.uploadDate
+        self.authorLabel.text = self.activePost?.authorNickname
         self.postImage.image = #imageLiteral(resourceName: "loading")
         PostModel.instance.getImage(urlStr: (self.activePost?.picture)!, callback: {(image) in
             self.postImage.image = image

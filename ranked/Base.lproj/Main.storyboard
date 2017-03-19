@@ -276,7 +276,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="qBS-3A-dzo"/>
                                             </constraints>
                                         </stackView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gb-7u-jmL">
+                                        <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gb-7u-jmL">
                                             <rect key="frame" x="8" y="28.333333333333336" width="398" height="25.000000000000007"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="V4R-bi-9L2">
@@ -297,7 +297,7 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.13725490200000001" green="0.20392156859999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="V4R-bi-9L2" firstAttribute="leading" secondItem="9Gb-7u-jmL" secondAttribute="leading" constant="10" id="AAC-cl-Vlx"/>
                                                 <constraint firstItem="V4R-bi-9L2" firstAttribute="top" secondItem="9Gb-7u-jmL" secondAttribute="top" id="YMo-T3-QGh"/>
@@ -328,6 +328,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="UIpostTitle" destination="KsX-Xn-Gza" id="9yF-9W-EzA"/>
+                                    <outlet property="authorLabel" destination="Rjs-a0-28S" id="4Qo-QB-oyg"/>
+                                    <outlet property="postDateLabel" destination="1mP-5b-PH3" id="nhM-yW-Ka9"/>
                                     <outlet property="postImage" destination="wgR-aU-Qcr" id="gDK-XI-7Cz"/>
                                     <segue destination="RM3-Uz-RPc" kind="show" identifier="showCommentsSegue" id="ZzZ-XG-J9Q"/>
                                 </connections>

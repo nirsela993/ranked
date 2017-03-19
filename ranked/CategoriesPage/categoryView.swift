@@ -82,9 +82,9 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "postTableCell", for: indexPath)
         
         if let postCell = cell as? postTableViewCell {
-            print("loading ----- ")
-            print(self.posts?[indexPath.row].title,indexPath.row)
-            
+//            print("loading ----- ")
+//            print(self.posts?[indexPath.row].title,indexPath.row)
+//            
             if(postCell.activePost == nil || postCell.activePost?.id != self.posts?[indexPath.row].id ){
                 postCell.loadPost(postToLoad: (self.posts?[indexPath.row])!,cellIndex: indexPath.row,callback: { })
             }
