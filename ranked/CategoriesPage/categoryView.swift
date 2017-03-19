@@ -75,9 +75,7 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
             print(self.posts?[indexPath.row].title,indexPath.row)
             
             if(postCell.activePost == nil || postCell.activePost?.id != self.posts?[indexPath.row].id ){
-                postCell.loadPost(postToLoad: (self.posts?[indexPath.row])!,callback: {
-//                    self.postsTableView.reloadRows(at: [indexPath], with: .none)
-                })
+                postCell.loadPost(postToLoad: (self.posts?[indexPath.row])!,cellIndex: indexPath.row,callback: { })
             }
         }
         

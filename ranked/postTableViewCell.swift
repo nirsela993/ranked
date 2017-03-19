@@ -21,7 +21,7 @@ class postTableViewCell: UITableViewCell {
     }
     
     
-    func loadPost(postToLoad:Post , callback:@escaping ()->Void){
+    func loadPost(postToLoad:Post , cellIndex:Int, callback:@escaping ()->Void){
 
         self.activePost = postToLoad
         self.UIpostTitle.text = self.activePost?.title
@@ -32,6 +32,7 @@ class postTableViewCell: UITableViewCell {
             self.layoutIfNeeded()
 //            callback()
         })
+        
         self.layoutIfNeeded()
     }
     
