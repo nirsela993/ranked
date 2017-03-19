@@ -183,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				59AFE0831E73F5B5001D51F7 /* .gitignore */,
-				17F4E5E51E7200FD0085960F /* Ï */,
+				17F4E5E51E7200FD0085960F /* ranked */,
 				17F4E5FA1E7200FD0085960F /* rankedTests */,
 				17F4E6051E7200FD0085960F /* rankedUITests */,
 				17F4E5E41E7200FD0085960F /* Products */,
@@ -202,7 +202,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		17F4E5E51E7200FD0085960F /* Ï */ = {
+		17F4E5E51E7200FD0085960F /* ranked */ = {
 			isa = PBXGroup;
 			children = (
 				590AC83F1E794947008EDBBC /* postListView */,
@@ -219,7 +219,6 @@
 				17F4E61F1E7225C50085960F /* MapViewController.swift */,
 				1708C6421E75AF1300F0CF42 /* NewItemViewController.swift */,
 			);
-			name = "Ï";
 			path = ranked;
 			sourceTree = "<group>";
 		};
