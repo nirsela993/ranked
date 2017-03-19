@@ -10,9 +10,6 @@ import Foundation
 import Firebase
 
 class CommentModelFirebase {
-    init(){
-        //FIRApp.configure()
-    }
     
     func addComment(comment:Comment, completionBlock:@escaping (Error?)->Void){
         let ref = FIRDatabase.database().reference().child("posts").child(comment.postId).child("comments").childByAutoId()
