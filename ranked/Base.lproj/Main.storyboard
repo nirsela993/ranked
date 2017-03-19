@@ -326,14 +326,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="128" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HAQ-6I-PHR">
-                                <rect key="frame" x="0.0" y="90" width="414" height="502"/>
+                                <rect key="frame" x="0.0" y="90" width="414" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="522" id="oq2-hD-G7a"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commentTableCell" rowHeight="128" id="cGM-ju-AIK" customClass="commentTableViewCell" customModule="ranked" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cGM-ju-AIK" id="oRE-r5-4QZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZs-dD-nGS">
@@ -357,7 +360,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xz8-W9-lnV">
-                                                    <rect key="frame" x="8" y="38.000000000000007" width="398" height="81.666666666666686"/>
+                                                    <rect key="frame" x="8" y="38" width="398" height="82"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -391,39 +394,68 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvI-cB-mSy">
-                                <rect key="frame" x="20" y="602" width="374" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="cRr-Gl-5c3"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGZ-8A-bUz">
-                                <rect key="frame" x="20" y="657" width="374" height="30"/>
+                                <rect key="frame" x="157.66666666666669" y="620" width="99.000000000000057" height="30"/>
                                 <state key="normal" title="Add Comment"/>
+                                <connections>
+                                    <action selector="openAddCommentView:" destination="RM3-Uz-RPc" eventType="touchUpInside" id="6rz-KC-2tL"/>
+                                </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAc-L2-Gmi">
+                                <rect key="frame" x="0.0" y="383" width="414" height="229"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="add a public comment..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QjD-VG-CCg">
+                                        <rect key="frame" x="20" y="59" width="374" height="116"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="RM3-Uz-RPc" id="fRc-Ze-Pqe"/>
+                                        </connections>
+                                    </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your nickname/username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvI-cB-mSy">
+                                        <rect key="frame" x="20" y="21" width="374" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N6-l7-XoU">
+                                        <rect key="frame" x="146" y="183" width="122" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Save Comment">
+                                            <color key="titleColor" red="0.23903272529678887" green="0.2365117270731627" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openAddCommentView:" destination="RM3-Uz-RPc" eventType="touchUpInside" id="je4-ci-WLl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2855760288275907" green="0.71856553198800399" blue="0.73012772817460325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.3242956561" green="1" blue="0.087715319159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="VvI-cB-mSy" secondAttribute="trailing" id="3Z7-xe-Vsg"/>
-                            <constraint firstItem="LGZ-8A-bUz" firstAttribute="top" secondItem="VvI-cB-mSy" secondAttribute="bottom" constant="5" id="41T-Xo-f8c"/>
-                            <constraint firstItem="LGZ-8A-bUz" firstAttribute="leading" secondItem="zgL-sh-24n" secondAttribute="leadingMargin" id="9Dp-86-WDm"/>
+                            <constraint firstItem="LGZ-8A-bUz" firstAttribute="top" secondItem="HAQ-6I-PHR" secondAttribute="bottom" constant="8" symbolic="YES" id="7GX-Ip-DAX"/>
+                            <constraint firstItem="gAc-L2-Gmi" firstAttribute="top" secondItem="zgL-sh-24n" secondAttribute="top" constant="383" id="98L-ko-Ziv"/>
+                            <constraint firstItem="HAQ-6I-PHR" firstAttribute="bottom" secondItem="gAc-L2-Gmi" secondAttribute="bottom" id="ClS-EW-lWh"/>
                             <constraint firstItem="HAQ-6I-PHR" firstAttribute="leading" secondItem="zgL-sh-24n" secondAttribute="leading" id="Hcd-iG-2QR"/>
                             <constraint firstAttribute="trailing" secondItem="HAQ-6I-PHR" secondAttribute="trailing" id="L6z-mI-MJj"/>
+                            <constraint firstItem="HAQ-6I-PHR" firstAttribute="trailing" secondItem="gAc-L2-Gmi" secondAttribute="trailing" id="P0L-1u-MVF"/>
                             <constraint firstItem="fzy-yd-qPX" firstAttribute="leading" secondItem="zgL-sh-24n" secondAttribute="leadingMargin" id="PeE-po-uNT"/>
-                            <constraint firstItem="VvI-cB-mSy" firstAttribute="leading" secondItem="zgL-sh-24n" secondAttribute="leadingMargin" id="QAd-sc-cWY"/>
                             <constraint firstItem="fzy-yd-qPX" firstAttribute="top" secondItem="gsP-0S-L1G" secondAttribute="bottom" id="W7f-Xz-xTd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fzy-yd-qPX" secondAttribute="trailing" id="YZ0-Tz-0Gk"/>
-                            <constraint firstItem="Ure-Gf-2bm" firstAttribute="top" secondItem="LGZ-8A-bUz" secondAttribute="bottom" id="aUg-qn-Ftj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LGZ-8A-bUz" secondAttribute="trailing" id="aYM-14-lKh"/>
-                            <constraint firstItem="VvI-cB-mSy" firstAttribute="top" secondItem="HAQ-6I-PHR" secondAttribute="bottom" constant="10" id="gGt-co-UE8"/>
+                            <constraint firstItem="HAQ-6I-PHR" firstAttribute="centerX" secondItem="LGZ-8A-bUz" secondAttribute="centerX" id="imt-wK-yLm"/>
                             <constraint firstItem="HAQ-6I-PHR" firstAttribute="top" secondItem="fzy-yd-qPX" secondAttribute="bottom" constant="5" id="oP6-cc-BQQ"/>
+                            <constraint firstItem="HAQ-6I-PHR" firstAttribute="leading" secondItem="gAc-L2-Gmi" secondAttribute="leading" id="ruP-Xj-BqX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addCommentView" destination="gAc-L2-Gmi" id="eMm-jd-OyK"/>
+                        <outlet property="commentText" destination="QjD-VG-CCg" id="081-Pm-JCJ"/>
                         <outlet property="postTitle" destination="fzy-yd-qPX" id="9L7-NR-ga0"/>
+                        <outlet property="usernameText" destination="VvI-cB-mSy" id="pVv-mu-eXx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOw-mx-7jk" userLabel="First Responder" sceneMemberID="firstResponder"/>
