@@ -13,13 +13,13 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
     var activePost:Post?
     
     @IBOutlet weak var postTitle: UILabel!
-    @IBOutlet weak var addCommentView: UIView!
+    
     @IBOutlet weak var commentText: UITextView!
     @IBOutlet weak var usernameText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.commentText.textColor = UIColor.lightGray
+//        self.commentText.textColor = UIColor.lightGray
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,20 +34,20 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = "add a public comment..."
-            textView.textColor = UIColor.lightGray
-        }
-    }
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = nil
-            textView.textColor = UIColor.black
-        }
-    }
-    
+//    
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//        if textView.text.isEmpty {
+//            textView.text = "add a public comment..."
+//            textView.textColor = UIColor.lightGray
+//        }
+//    }
+//    func textViewDidBeginEditing(_ textView: UITextView) {
+//        if textView.textColor == UIColor.lightGray {
+//            textView.text = nil
+//            textView.textColor = UIColor.black
+//        }
+//    }
+//    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.activePost?.comments.count ?? 0
     }
@@ -69,6 +69,20 @@ class commentsViewController: UIViewController ,UITableViewDelegate,UITableViewD
         return cell
     }
     @IBAction func openAddCommentView(_ sender: UIButton) {
-        self.addCommentView.isHidden = !self.addCommentView.isHidden
+//        self.addCommentView.isHidden = !self.addCommentView.isHidden
+//
+//        for constraint in self.addCommentView.constraints as [NSLayoutConstraint] {
+//            print("------testing constraints--------")
+//            print("constraint",constraint.identifier ?? "got NIL")
+//            if(constraint.identifier == "newCommentHeight"){
+//                print("got constraint")
+//                if(self.addCommentView.isHidden){
+//                    constraint.constant = 0
+//                } else{
+//                    constraint.constant = 220
+//                }
+//            }
+//        }
+//        self.view.layoutIfNeeded()
     }
 }

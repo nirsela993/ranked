@@ -76,20 +76,9 @@ class categoryView: UIViewController, UITableViewDelegate,UITableViewDataSource{
             
             if(postCell.activePost == nil || postCell.activePost?.id != self.posts?[indexPath.row].id ){
                 postCell.loadPost(postToLoad: (self.posts?[indexPath.row])!,callback: {
-                    self.postsTableView.reloadRows(at: [indexPath], with: .none)
+//                    self.postsTableView.reloadRows(at: [indexPath], with: .none)
                 })
             }
-            
-            
-            //            if(postCell.activePost == nil){
-            //                PostModel.instance.getImage(urlStr: (self.posts?[indexPath.row].picture)!, callback: {(image) in
-            //                    postCell.loadPost()
-            
-            //                    self.postsTableView.reloadRows(at: [indexPath], with: .none)
-            
-            
-            //                })
-            //        }
         }
         
         return cell

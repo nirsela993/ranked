@@ -37,6 +37,7 @@
 		59DE6C3E1E7AFE3000FE0FC7 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DE6C3D1E7AFE3000FE0FC7 /* Comment.swift */; };
 		59DE6C401E7B07A000FE0FC7 /* commentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DE6C3F1E7B07A000FE0FC7 /* commentsViewController.swift */; };
 		59DE6C421E7C223500FE0FC7 /* commentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DE6C411E7C223500FE0FC7 /* commentTableViewCell.swift */; };
+		59F672731E7EB3DD007E9DA8 /* addCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F672721E7EB3DD007E9DA8 /* addCommentViewController.swift */; };
 		C3C591D94BA97296075CD32F /* Pods_rankedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B092BE80D010BB217558290 /* Pods_rankedTests.framework */; };
 		D1BC140F66C6226CBB60414D /* Pods_rankedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E922B6AB52C06CFF7B67DDB /* Pods_rankedUITests.framework */; };
 		E192021628AF98541CB4257F /* Pods_ranked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF81D44AC2B85AC4DF30804 /* Pods_ranked.framework */; };
@@ -100,6 +101,7 @@
 		59DE6C3D1E7AFE3000FE0FC7 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		59DE6C3F1E7B07A000FE0FC7 /* commentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentsViewController.swift; sourceTree = "<group>"; };
 		59DE6C411E7C223500FE0FC7 /* commentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentTableViewCell.swift; sourceTree = "<group>"; };
+		59F672721E7EB3DD007E9DA8 /* addCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addCommentViewController.swift; sourceTree = "<group>"; };
 		7CF81D44AC2B85AC4DF30804 /* Pods_ranked.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ranked.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B092BE80D010BB217558290 /* Pods_rankedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E922B6AB52C06CFF7B67DDB /* Pods_rankedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rankedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				590AC8401E79496D008EDBBC /* postListVIewController.swift */,
+				59F672721E7EB3DD007E9DA8 /* addCommentViewController.swift */,
 				59DE6C311E79EB3600FE0FC7 /* postTableViewCell.swift */,
 				59DE6C3F1E7B07A000FE0FC7 /* commentsViewController.swift */,
 				59DE6C411E7C223500FE0FC7 /* commentTableViewCell.swift */,
@@ -562,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F672731E7EB3DD007E9DA8 /* addCommentViewController.swift in Sources */,
 				177EDA671E7C02A1003686E5 /* PostModelSql.swift in Sources */,
 				59DE6C321E79EB3600FE0FC7 /* postTableViewCell.swift in Sources */,
 				178FBADB1E7BF31F000E0E40 /* PostModel.swift in Sources */,
