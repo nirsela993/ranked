@@ -50,6 +50,7 @@ class PostModel{
     lazy private var modelFirebase:PostModelFirebase? = PostModelFirebase()
     
     private init(){
+        startTimer()
     }
     
     private func saveImageToFile(image:UIImage, name:String){
